@@ -15,8 +15,8 @@ title = "Home"
 [params.author]
   name = "Fangfei Li"
   image = "img/author.jpg"
-  headline = "I'm only human"
-  bio = "A little bit about you"
+  # headline = "I'm only human"
+  # bio = "A little bit about you"
   links = [
     { email = "mailto:fangfeili0525@gmail.com" },
     { github = "https://github.com/FangfeiLi05" },
