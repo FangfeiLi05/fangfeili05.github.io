@@ -1,12 +1,12 @@
 ---
-title: "Certificates"
-description: "List of certificates"
+title: "Course Certifications"
+description: "List of course certifications"
 
 cascade:
   showReadingTime: false
   showEdit: false
 ---
 
-This is a list of certificates.
+This is a list of course certifications.
 
 ---
