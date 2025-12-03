@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write     # REQUIRED for actions-gh-pages to push to gh-pages
+
 jobs:
   build:
     runs-on: ubuntu-latest
