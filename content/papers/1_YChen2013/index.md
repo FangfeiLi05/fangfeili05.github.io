@@ -9,7 +9,7 @@ tags: []
 ### Links
 
 - [Journal Page](https://doi.org/10.1109/TCSII.2013.2251961)
-- [View PDF](template.pdf)
+- [View PDF](/files/template.pdf)
 
 
 ### Citation
