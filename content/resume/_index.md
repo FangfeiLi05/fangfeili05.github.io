@@ -1,12 +1,8 @@
 ---
 title: "My Resume"
-date: 2025-12-01
 description: "My resume"
-summary: ""
-
-cascade:
-  showReadingTime: false
-  showEdit: false
 ---
+
+Updated at December 1, 2025.
 
 - [View PDF](/files/resume_FL_20251201.pdf)
