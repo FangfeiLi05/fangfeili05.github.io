@@ -3,8 +3,9 @@ languageName = "English"
 languageDirection = "ltr"
 weight = 1
 
-title = "Home"
+title = "Homepage"
 # copyright = "Copy, _right?_ :thinking_face:"
+copyright = "© 2025 - Fangfei Li"
 
 [params]
   dateFormat = "2 January 2006"
