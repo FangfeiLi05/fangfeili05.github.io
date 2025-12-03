@@ -1,12 +1,12 @@
 ---
-title: "GitHub Related"
+title: "Branch Merge"
 date: 2025-12-03
 description: "Add description"
-summary: "GitHub Related"
+summary: "GitHub"
 tags: []
 ---
 
-#### 1. Merge dev branch into main
+#### Merge dev branch into main
 
 **Step 1. Run**
 ```
