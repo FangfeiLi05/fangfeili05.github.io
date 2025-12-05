@@ -1,6 +1,6 @@
 ---
 title: "Homepage"
-description: "This is a demo of adding content to the homepage."
+description: "Add description"
 ---
 
 ✅ **Ph.D. in Applied Mathematics & Statistics** | 2 yrs postdoc + 2 yrs biotech startup + 3 yrs wet-lab (synthetic barcoding–based in vivo lineage tracing) 
