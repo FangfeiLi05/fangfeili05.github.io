@@ -6,7 +6,7 @@ cascade:
   showReadingTime: false
   showEdit: false
   showSummary: true
-  showTableOfContents: false
+  showTableOfContents: true
 ---
 
 This is a list of learning notes.

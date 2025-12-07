@@ -6,52 +6,52 @@ summary: "GitHub"
 tags: []
 ---
 
-### Branch Merge Workflow: Merging `dev` into `main`
+### 1. Branch Merge Workflow
+
+- **Step 0. Flowchart**
 
 {{< mermaid >}}
-graph TB;
+graph TD
 
-A["""Start"""] 
---> B["""
+A["""
 git switch -c dev
 git push -u origin dev
-"""];
+"""]
 
-B --> C["""
+A --> B["""
 git add .
 git commit -m 'msg'
 git push
-"""];
+"""]
 
-C --> D["""
+B --> C["""
 git switch main
 git pull
-"""];
+"""]
 
-D --> E["""
+C --> D["""
 git merge dev
-"""];
+"""]
 
-E --> F{Merge conflicts?};
+D --> E{Merge conflicts?}
 
-F -- No --> G["""
+E -- No --> F["""
 git push
-"""];
+"""]
 
-F -- Yes --> H["""
+E -- Yes --> G["""
 git status
 git add src/app.js
 git commit -m 'msg' 
-"""];
+"""]
 
-H --> G;
+G --> F
 
-G --> I["""
+F --> H["""
 git branch -d dev
 git push origin --delete dev
-"""];
+"""]
 
-I --> J[End];
 {{< /mermaid >}}
 
 
@@ -121,7 +121,7 @@ I --> J[End];
 
 ---
 
-### When Do Merge Conflicts Occur?
+### 2. When Do Merge Conflicts Occur?
 
 | &nbsp; | Conditions | Result |
 | ----- | ----- | ----- |
@@ -131,7 +131,7 @@ I --> J[End];
 
 ---
 
-### Git Terminology: Repositories, Remotes, and Branches
+### 3. Git Terminology
 
 |   | Local | Remote |
 | ----- | ----- | ----- |
