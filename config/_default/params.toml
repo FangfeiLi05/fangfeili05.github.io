@@ -86,3 +86,6 @@ fingerprintAlgorithm = "sha256"
   # bing = ""
   # pinterest = ""
   # yandex = ""
+
+[mermaid]
+  enable = true
