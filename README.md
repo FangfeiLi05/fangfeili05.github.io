@@ -19,6 +19,7 @@ The site is built using the [**Hugo**](https://github.com/gohugoio/hugo) static 
 
 ## 📚 Content Structure
 
+```
 my-hugo-site/
 │
 ├── config/                     # 1. Site configuration
@@ -51,6 +52,7 @@ my-hugo-site/
 │   └── favicon.ico
 │
 └── themes/                     # 6. External theme code (optional)
+```
 
 ---
 
