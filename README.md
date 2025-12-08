@@ -20,7 +20,7 @@ The site is built using the [**Hugo**](https://github.com/gohugoio/hugo) static 
 ## 📚 Content Structure
 
 ```
-my-hugo-site/
+root/
 │
 ├── config/                     # 1. Site configuration
 │   └── _default/
