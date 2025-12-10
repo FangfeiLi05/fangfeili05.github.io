@@ -31,9 +31,10 @@ tags: []
 
 #### Other Link
 
-- PyTorch Tutorial (originally for XCS224N) ([YouTube](https://www.youtube.com/watch?v=Uv0AIRr3ptg) |  [CoLab](https://colab.research.google.com/drive/1XJhrdkcE6rlC3WwtH7Py1bYl8CEVuBSU?usp=sharing))
 - [Course Webpage](https://deepgenerativemodels.github.io/)
 - [Lecture Notes](https://deepgenerativemodels.github.io/notes/)
+- PyTorch Tutorial (originally for XCS224N) ([YouTube](https://www.youtube.com/watch?v=Uv0AIRr3ptg) |  [CoLab](https://colab.research.google.com/drive/1XJhrdkcE6rlC3WwtH7Py1bYl8CEVuBSU?usp=sharing))
+- Variational Autoencoders | Generative AI Animated ([YouTube](https://www.youtube.com/watch?v=qJeaCHQ1k2w))
 - Book: Deep Learning - Ian Goodfellow, Yoshua Bengio, and Aaron Courville ([PDF Download](https://www.deeplearningbook.org/))
 - Probabilistic Machine Learning: Advanced Topics - Kevin Patrick Murphy, p771--924 (IV Generation)
 ([Info](https://probml.github.io/pml-book/book2.html) | [PDF Download](https://github.com/probml/pml2-book))
@@ -43,7 +44,6 @@ tags: []
   - Chapter 24 Energy-based models
   - Chapter 25 Diffusion models
   - Chapter 26 Generative adversarial networks
-- Variational Autoencoders | Generative AI Animated ([YouTube](https://www.youtube.com/watch?v=qJeaCHQ1k2w))
 
 <br>
 

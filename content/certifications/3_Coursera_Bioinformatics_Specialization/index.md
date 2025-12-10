@@ -1,7 +1,6 @@
 ---
 title: "Bioinformatics Specialization - Coursera"
-date: 2025-12-30
-
+date: 2025-12-01
 description: "Add description"
 summary: "In Progress"
 tags: []
