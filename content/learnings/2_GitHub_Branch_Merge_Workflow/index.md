@@ -1,14 +1,12 @@
 ---
-title: "GitHub Related"
+title: "GitHub Branch Merge Workflow"
 date: 2025-12-07
 description: "Add description"
 summary: "GitHub"
 tags: [""]
 ---
 
-### 1. Branch Merge Workflow
-
-- **Step 0. Flowchart**
+### 1. Flowchart
 
 {{< mermaid >}}
 graph TD
@@ -54,6 +52,9 @@ git push origin --delete dev
 
 {{< /mermaid >}}
 
+---
+
+### 2. How to Merge Branch?
 
 - **Step 1. Create a new `dev` branch**
   ```bash
