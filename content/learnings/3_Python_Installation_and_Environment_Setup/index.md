@@ -8,13 +8,11 @@ tags: [""]
 
 ### 1. Installation
 
-- **Step 1. Install Visual Studio Code**
+- **Step 1. Install [Visual Studio Code](https://code.visualstudio.com/docs/introvideos/basics)**: [Download & Install](https://code.visualstudio.com/download)
 
-  [Download](https://code.visualstudio.com/download) | [Tutorial](https://code.visualstudio.com/docs/introvideos/basics)
+- **Step 2. Install Homebrew**: [Install](https://brew.sh/)
 
-- **Step 2. Install Homebrew**
-
-  [Installation Info](https://brew.sh/), then add to your PATH
+  Then add to your PATH
   
   ```bash
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<username>/.zprofile
@@ -26,7 +24,7 @@ tags: [""]
   # brew --version
   ```
 
-- **Step 3. Install Python 3.13 (using Homebrew)**
+- **Step 3. Install Python 3.13 (using Homebrew)**:
   
   ```bash
   brew install python@3.13
@@ -39,18 +37,16 @@ tags: [""]
   # which python python3 # Check which python/python3 is used by default
   ```
 
-- **Step 4. Install uv**
-  
-  [Info](https://github.com/astral-sh/uv)
 
+### 1. Environment Setup (using uv)
+
+- **Step 1. Install [uv](https://github.com/astral-sh/uv)**:
+  
   ```bash
   curl -LsSf https://astral.sh/uv/install.sh | sh
   ```
 
-
-### 1. Environment Setup
-
-- **Step 1. Set up Python environment (using uv)**
+- **Step 2. Set up Python environment**:
   
   ```bash
   uv init 
@@ -67,9 +63,22 @@ tags: [""]
   # uv run python <name>.py # Run Python scripts
   ```
 
-- **Step 2. Install Python packages (using uv)**
+- **Step 3. Install Python packages**:
 
   ```
   uv add regex torch torchvision PyYAML matplotlib requests tqdm notebook
   # uv add numpy pandas
   ```
+
+
+### 2. Environment Setup (using Conda)
+
+- **Step 1. Install [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main)**
+
+- **Step 2. Set up Python environment**:
+
+To add
+
+- **Step 3. Install Python packages**:
+
+To add
