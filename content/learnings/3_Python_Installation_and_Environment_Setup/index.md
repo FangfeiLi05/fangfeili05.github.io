@@ -38,7 +38,7 @@ tags: [""]
   ```
 
 
-### 1. Environment Setup (using uv)
+### 2. Optiona 1 -- Environment Setup (using uv)
 
 - **Step 1. Install [uv](https://github.com/astral-sh/uv)**:
   
@@ -71,7 +71,7 @@ tags: [""]
   ```
 
 
-### 2. Environment Setup (using Conda)
+### 3. Optiona 2 -- Environment Setup (using Conda)
 
 - **Step 1. Install [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main)**
 
