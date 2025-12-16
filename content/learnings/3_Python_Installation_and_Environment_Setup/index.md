@@ -6,64 +6,63 @@ summary: "Python"
 tags: [""]
 ---
 
-### 1. Installation
+### 1. Method 1 -- VS Code + Homebrew + `uv` (Lightweight)
+
+This approach uses macOS’s standard package manager (Homebrew) to install Python, along with VS Code’s native tooling for development. It is a lightweight, modern workflow commonly preferred by web developers and software engineers.
 
 - **Step 1. Install [Visual Studio Code](https://code.visualstudio.com/docs/introvideos/basics)**: [Download & Install](https://code.visualstudio.com/download)
 
 - **Step 2. Install Homebrew**: [Install](https://brew.sh/)
 
-  Then add to your PATH
+  Then add Homebrew to your PATH
   
   ```bash
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<username>/.zprofile
-  # Run `brew shellenv` in every new terminal
+  # Ensure Homebrew is available in new terminal sessions
 
   eval "$(/opt/homebrew/bin/brew shellenv)"
-  # Apply the Homebrew environment settings immediately without restarting the terminal
+  # Apply Homebrew settings immediately without restarting the terminal
 
   # brew --version
   ```
 
-- **Step 3. Install Python 3.13 (using Homebrew)**:
+- **Step 3. Install Python 3.13 (via Homebrew)**:
   
   ```bash
   brew install python@3.13
   # Installed as: /opt/homebrew/bin/python3
 
   brew cleanup python@3.13
-  # Clean up old files for python@3.13 (does NOT uninstall it)
+  # Removes outdated files (does NOT uninstall Python)
 
-  # which -a python python3 # Find all python/python3 executables in your PATH
-  # which python python3 # Check which python/python3 is used by default
+  # which -a python python3  # List all Python/Python3 executables in PATH
+  # which python python3  # Show the default Python/Python3 in use
   ```
 
-
-### 2. Optiona 1 -- Environment Setup (using uv)
-
-- **Step 1. Install [uv](https://github.com/astral-sh/uv)**:
+- **Step 4. Install [`uv`](https://github.com/astral-sh/uv) (a fast Python package and environment manager)**:
   
   ```bash
   curl -LsSf https://astral.sh/uv/install.sh | sh
   ```
 
-- **Step 2. Set up Python environment**:
+- **Step 5. Set up the Python project environment (using `uv`)**:
   
   ```bash
-  uv init 
-  # Initialize a new Python project environment. 
-  # It will:
-  # - Create `pyproject.toml` if it does not exist
-  # - Create or reuse a `.venv/` virtual environment
-  #   - If `.venv/` exists, uv uses its Python interpreter
-  #   - If not, uv creates one using the default `python3` on your PATH
-  #     (Use a different version by running `python3.13 -m venv .venv` before `uv init`)
-  # - Optionally create `uv.lock`
-  # - Detect existing dependencies
-  
-  # uv run python <name>.py # Run Python scripts
+  uv init
+
+  # uv run python <name>.py  # Run Python scripts
   ```
 
-- **Step 3. Install Python packages**:
+  This command will:
+    - Create `pyproject.toml` if it does not already exist
+    - Create or reuse a `.venv/` virtual environment
+      - If `.venv/` exists, `uv` uses its Python interpreter
+      - Otherwise, `uv` creates one using the default python3 on your PATH
+        - To use a specific version, run `python3.13 -m venv .venv` before `uv init`
+    - Optionally generate uv.lock
+    - Detect existing dependencies
+
+- **Step 6. Install Python packages (using `uv`)**:
 
   ```
   uv add regex torch torchvision PyYAML matplotlib requests tqdm notebook
@@ -71,14 +70,45 @@ tags: [""]
   ```
 
 
-### 3. Optiona 2 -- Environment Setup (using Conda)
+### 1. Method 2 -- Conda (Data Science / AI)
+
+This approach uses Conda, a heavier but more powerful environment manager that handles both Python versions and complex non-Python dependencies (e.g., C/C++ libraries, CUDA). It is the standard workflow in data science and AI.
 
 - **Step 1. Install [Miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main)**
 
-- **Step 2. Set up Python environment**:
+- **Step 2. Create the project environment and install dependencies**:
 
-To add
+  ```
+  conda env create --file environment.yml
+  
+  # conda env list
+  # conda env remove --name <envname>
+  # conda clean --all # Free up disk space
+  ```
 
-- **Step 3. Install Python packages**:
+  Here is an example of an [`environment.yml`](./environment.yml) file.
 
-To add
+- **Step 3a. Install JupyterLab with automatic kernel discovery (recommended)**
+  
+  ```
+  conda create -n jupyter_env python=3.14 jupyterlab nb_conda_kernels -c conda-forge
+
+  # conda activate jupyter_env
+  # jupyter lab
+
+  # jupyter kernelspec list
+  # jupyter kernelspec remove <kernelname>
+  ```
+
+  `nb_conda_kernels` allows Jupyter to automatically detect all Conda environments as usable kernels.
+
+- **Step 3b. Install JupyterLab with manual kernel setup**
+  
+  ```
+  conda create -n jupyter_env python=3.14 jupyterlab -c conda-forge
+
+  conda activate <envname>
+  conda install ipykernel -c anaconda
+  ipython kernel install --user --name=<kernelname>
+  conda deactivate
+  ```

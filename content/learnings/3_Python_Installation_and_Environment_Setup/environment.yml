@@ -1,0 +1,31 @@
+name: XCS236
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pandas==2.3.1
+  - requests==2.32.4
+  - scipy==1.16.0
+  - scikit-learn==1.7.1
+  - tensorboard==2.19.0
+  - matplotlib==3.10.0
+  - tqdm==4.67.1
+  - thefuzz==0.22.1
+  - seaborn==0.13.2
+  - pillow==11.3.0
+  - pyyaml==6.0.2
+  - pip==25.1
+  - pip:
+    - timeout_decorator==0.5.0
+    - "--find-links https://download.pytorch.org/whl/torch/"
+    - torch==2.8.0; sys_platform != "linux" and sys_platform != "win32"
+    - torch==2.8.0+cpu; sys_platform == "linux" or sys_platform == "win32"
+    - "--find-links https://download.pytorch.org/whl/torchvision/"
+    - torchvision==0.23.0; sys_platform != "linux" and sys_platform != "win32"
+    - torchvision==0.23.0; sys_platform == "linux" or sys_platform == "win32"
+    # Manage the below packages over pip to avoid segmentation fault in transformers on Mac
+    - datasets==4.0.0
+    - numpy==2.3.2
+    - memory-profiler==0.61.0
+    - diffusers==0.35.1

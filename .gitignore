@@ -1,5 +1,5 @@
 public/
 resources/
-backup/
+_backup/
 .hugo_build.lock
 .DS_Store
