@@ -6,27 +6,30 @@ summary: "Python"
 tags: [""]
 ---
 
-### 1. Method 1 -- VS Code + Homebrew + `uv` (Lightweight)
+### 1. Method 1 -- VS Code + Homebrew + `uv`
 
-This approach uses macOS’s standard package manager (Homebrew) to install Python, along with VS Code’s native tooling for development. It is a lightweight, modern workflow commonly preferred by web developers and software engineers.
+Best for general Python, web development, and small projects. Lightweight, fast, and modern.
 
-- **Step 1. Install [Visual Studio Code](https://code.visualstudio.com/docs/introvideos/basics)**: [Download & Install](https://code.visualstudio.com/download)
+- **Step 1. Install VS Code**
 
-- **Step 2. Install Homebrew**: [Install](https://brew.sh/)
+  - [Info](https://code.visualstudio.com/docs/introvideos/basics)
+  - [Download & Install](https://code.visualstudio.com/download)
 
-  Then add Homebrew to your PATH
-  
-  ```bash
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<username>/.zprofile
-  # Ensure Homebrew is available in new terminal sessions
+- **Step 2. Install Homebrew**
 
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-  # Apply Homebrew settings immediately without restarting the terminal
+  - [Install](https://brew.sh/)
+  -  Then add Homebrew to your PATH, by running in Terminal:
+    ```bash
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<username>/.zprofile
+    # Ensure Homebrew is available in new terminal sessions
 
-  # brew --version
-  ```
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    # Apply Homebrew settings immediately without restarting the terminal
 
-- **Step 3. Install Python 3.13 (via Homebrew)**:
+    # brew --version
+    ```
+
+- **Step 3. Install Python**:
   
   ```bash
   brew install python@3.13
@@ -35,15 +38,18 @@ This approach uses macOS’s standard package manager (Homebrew) to install Pyth
   brew cleanup python@3.13
   # Removes outdated files (does NOT uninstall Python)
 
+  # python3 --version
   # which -a python python3  # List all Python/Python3 executables in PATH
   # which python python3  # Show the default Python/Python3 in use
   ```
 
-- **Step 4. Install [`uv`](https://github.com/astral-sh/uv) (a fast Python package and environment manager)**:
+- **Step 4. Install `uv` (a fast Python package and environment manager)**:
+
+  - [Info](https://github.com/astral-sh/uv)
   
-  ```bash
-  curl -LsSf https://astral.sh/uv/install.sh | sh
-  ```
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
 
 - **Step 5. Set up the Python project environment (using `uv`)**:
   
@@ -79,14 +85,14 @@ This approach uses Conda, a heavier but more powerful environment manager that h
 - **Step 2. Create the project environment and install dependencies**:
 
   ```
-  conda env create --file environment.yml
+  conda env create --file environment.yaml
   
   # conda env list
   # conda env remove --name <envname>
   # conda clean --all # Free up disk space
   ```
 
-  Here is an example of an [`environment.yml`](./environment.yml) file.
+  Here is an example of an [`environment.yaml`](/files/environment.yaml) file.
 
 - **Step 3a. Install JupyterLab with automatic kernel discovery (recommended)**
   

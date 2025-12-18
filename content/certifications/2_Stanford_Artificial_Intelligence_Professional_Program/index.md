@@ -16,7 +16,7 @@ tags: []
 
 1. **Deep Generative Models - XCS236**  
    - [Course Page](https://online.stanford.edu/courses/xcs236-deep-generative-models)  
-   - [Course Certificate]()
+   - [Course Certificate](https://digitalcredential.stanford.edu/check/6E5C7A86B7D9CF298B31FC2642F6C6894050A0D01655BE0634C96C653932E059SFV6V3hwSU5RVDJJcmJoTjlLK0IvRkliajNocU9iM3VMMVBhZGdCTmR6VTJHWVQ2)
 
 2. **Deep Reinforcement Learning - XCS224R**  
    - [Course Page](https://online.stanford.edu/courses/xcs224r-deep-reinforcement-learning)  
