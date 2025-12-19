@@ -6,13 +6,14 @@ summary: "In Progress"
 tags: []
 ---
 
-### Links
+## Links
 
 - [Homepage](https://www.coursera.org/specializations/bioinformatics)
 - [Certificate]() todo 
 
+---
 
-### Courses (7 total)
+## Courses (7 total)
 
 1. **Finding Hidden Messages in DNA (Bioinformatics I)**  
    - [Course Page](https://www.coursera.org/learn/dna-analysis?specialization=bioinformatics)  
@@ -24,7 +25,7 @@ tags: []
 
 3. **Comparing Genes, Proteins, and Genomes (Bioinformatics III)**  
    - [Course Page](https://www.coursera.org/learn/comparing-genomes?specialization=bioinformatics)  
-   - [Course Certificate]() todo 
+   - [Course Certificate]() todo
 
 4. **Molecular Evolution (Bioinformatics IV)**  
    - [Course Page](https://www.coursera.org/learn/molecular-evolution?specialization=bioinformatics)  
@@ -40,4 +41,4 @@ tags: []
 
 7. **Bioinformatics Capstone: Big Data in Biology**  
    - [Course Page](https://www.coursera.org/learn/bioinformatics-project?specialization=bioinformatics)  
-   - [Course Certificate]() todo 
+   - [Course Certificate]() todo

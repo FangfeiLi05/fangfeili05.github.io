@@ -6,13 +6,14 @@ summary: "In Progress"
 tags: []
 ---
 
-### Links
+## Links
 
 - [Homepage](https://online.stanford.edu/programs/artificial-intelligence-professional-program)
-- [Certificate]() todo 
+- [Certificate]() todo
 
+---
 
-### Courses (3 total)
+## Courses (3 total)
 
 1. **Deep Generative Models - XCS236**  
    - [Course Page](https://online.stanford.edu/courses/xcs236-deep-generative-models)  
