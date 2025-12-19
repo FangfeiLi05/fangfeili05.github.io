@@ -11,65 +11,79 @@ tags: [""]
 Best for general Python, web development, and small projects. Lightweight, fast, and modern.
 
 - **Step 1. Install VS Code**
-  - [Info](https://code.visualstudio.com/docs/introvideos/basics)
-  - [Download & Install](https://code.visualstudio.com/download)
+  
+  [Info](https://code.visualstudio.com/docs/introvideos/basics)
+  
+  [Download & Install](https://code.visualstudio.com/download)
 
 - **Step 2. Install Homebrew**
-  - [Install](https://brew.sh/)
-  - Then add Homebrew to your PATH, by running in Terminal
-    ```bash
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<username>/.zprofile
-    # Ensure Homebrew is available in new terminal sessions
+  
+  [Install](https://brew.sh/)
+  
+  Then add Homebrew to your PATH, by running in Terminal
 
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-    # Apply Homebrew settings immediately without restarting the terminal
+  ```bash
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<username>/.zprofile
+  # Ensure Homebrew is available in new terminal sessions
 
-    # brew --version
-    ```
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  # Apply Homebrew settings immediately without restarting the terminal
+
+  # brew --version
+  ```
 
 - **Step 3. Install Python**:
-  - Run in Terminal
-    ```bash
-    brew install python@3.13
-    # Installed as: /opt/homebrew/bin/python3
+  
+  Run in Terminal
 
-    brew cleanup python@3.13
-    # Remove outdated files (does NOT uninstall Python)
+  ```bash
+  brew install python@3.13
+  # Installed as: /opt/homebrew/bin/python3
 
-    # python3 --version
-    ```
+  brew cleanup python@3.13
+  # Remove outdated files (does NOT uninstall Python)
+
+  # python3 --version
+  ```
 
 - **Step 4. Install `uv` (fast Python package and environment manager)**:
-  - [Info](https://github.com/astral-sh/uv)
-  - Run in Terminal
-    ```bash
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    ```
+  
+  [Info](https://github.com/astral-sh/uv)
+  
+  Run in Terminal
+  
+  ```bash
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  ```
 
 - **Step 5. Create a Python project environment**:
-  - Run in Terminal
-    ```bash
-    uv init
+  
+  Run in Terminal
 
-    # This automatically:
-    #  - Creates `pyproject.toml` if missing
-    #  - Creates or reuses a virtual environment (`.venv`) 
-    #    - If `.venv` exists, uses its Python interpreter
-    #    - Otherwise, creates one using the default `python3` from PATH
-    #      - To use a specific version, run `python3.13 -m venv .venv` before `uv init`
-    #  - Optionally generates `uv.lock`
-    #  - Detects existing dependencies
+  ```bash
+  uv init
 
-    # uv run python <name>.py
-    # Run Python scripts
-    ```
+  # This automatically:
+  #  - Creates `pyproject.toml` if missing
+  #  - Creates or reuses a virtual environment (`.venv`) 
+  #    - If `.venv` exists, uses its Python interpreter
+  #    - Otherwise, creates one using the default `python3` from PATH
+  #      - To use a specific version, run `python3.13 -m venv .venv` before `uv init`
+  #  - Optionally generates `uv.lock`
+  #  - Detects existing dependencies
+
+  # uv run python <name>.py
+  # Run Python scripts
+  ```
 
 - **Step 6. Install dependencies**:
-  - Run in Terminal
-    ```bash
-    uv add regex torch torchvision PyYAML matplotlib requests tqdm notebook
-    # uv add numpy pandas
-    ```
+  
+  Run in Terminal
+
+  ```bash
+  uv add regex torch torchvision PyYAML matplotlib requests tqdm notebook
+  # uv add numpy pandas
+  ```
 
 
 ### 2. Method 2 -- Conda
@@ -77,67 +91,82 @@ Best for general Python, web development, and small projects. Lightweight, fast,
 Best for data science, machine learning, and scientific computing. Heavier, but handles complex libraries well.
 
 - **Step 1. Install Miniconda**
-  - [Download and install](https://www.anaconda.com/docs/getting-started/miniconda/main)
+  
+  [Download and install](https://www.anaconda.com/docs/getting-started/miniconda/main)
 
 - **Step 2. Create a Python project environment and install dependencies**:
-  - Run in Terminal
-    ```bash
-    conda env create -f environment.yaml
-    ```
+  
+  Run in Terminal
+  
+  ```bash
+  conda env create -f environment.yaml
+  ```
 
-    Example: [`environment.yaml`](/files/environment.yaml)
+  Example: [`environment.yaml`](/files/environment.yaml)
 
 - **Step 3. Create a Python Jupyter environment (for running JupyterLab)**
-  - Run in Terminal
-    ```bash
-    conda create -n jupyter_env python=3.14 jupyterlab -c conda-forge
+  
+  Run in Terminal
+  
+  ```bash
+  conda create -n jupyter_env python=3.14 jupyterlab -c conda-forge
 
-    # conda activate jupyter_env
-    # jupyter lab
-    # conda deactivate
-    ```
+  # conda activate jupyter_env
+  # jupyter lab
+  # conda deactivate
+  ```
 
 - **Step 4a (recommended; choose either 4a or 4b). Enable automatic Jupyter kernel discovery**
-  - Run in Terminal
-    ```bash
-    conda activate jupyter_env
-    conda install nb_conda_kernels -c conda-forge
-    conda deactivate
-    ```
   
-    `nb_conda_kernels` allows JupyterLab to automatically detect all Conda environments as usable kernels.
+  Run in Terminal
+
+  ```bash
+  conda activate jupyter_env
+  conda install nb_conda_kernels -c conda-forge
+  conda deactivate
+  ```
+  
+  `nb_conda_kernels` allows JupyterLab to automatically detect all Conda environments as usable kernels.
 
 - **Step 4b (choose either 4a or 4b). Configure a Jupyter kernel manually**
-  - Run in Terminal
-    ```bash
-    conda activate <envname>
-    conda install ipykernel -c anaconda
-    ipython kernel install --user --name=<kernelname>
-    conda deactivate
-    ```
+  
+  Run in Terminal
+
+  ```bash
+  conda activate <envname>
+  conda install ipykernel -c anaconda
+  ipython kernel install --user --name=<kernelname>
+  conda deactivate
+  ```
 
 ### 3. Extra Useful Commands
 
-  ```
-  which -a python python3
-  # List all Python / Python3 executables in PATH
+  - 
+    ```bash
+    which -a python python3
+    # List all Python / Python3 executables in PATH
 
-  which python python3
-  # Show the default Python / Python3 in use
+    which python python3
+    # Show the default Python / Python3 in use
+    ```
+  - 
+    ```bash
+    conda env list
+    # List all Conda environments
 
-  conda env list
-  # List all Conda environments
+    conda env remove -n <envname>
+    # Remove a Conda environment
 
-  conda env remove -n <envname>
-  # Remove a Conda environment
+    conda clean --all 
+    # Free up disk space by removing unused packages and caches
+    ```
+    
+  - 
+    ```bash
+    jupyter kernelspec list
+    # List all available Jupyter kernels
+    # (Use the Jupyter installation currently on your PATH)
 
-  conda clean --all 
-  # Free up disk space by removing unused packages and caches
-
-  jupyter kernelspec list
-  # List all available Jupyter kernels
-  # (Use the Jupyter installation currently on your PATH)
-
-  jupyter kernelspec remove <kernelname>
-  # Remove a specific Jupyter kernel
-  ```
+    jupyter kernelspec remove <kernelname>
+    # Remove a specific Jupyter kernel
+    ```
