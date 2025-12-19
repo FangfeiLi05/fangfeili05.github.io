@@ -24,7 +24,7 @@ Best for general Python, web development, and small projects. Lightweight, fast,
 
   ```bash
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<user-name>/.zprofile  # Ensure Homebrew is available in new terminal sessions
-  eval "$(/opt/homebrew/bin/brew shellenv)"                                        # Apply Homebrew settings immediately without restarting the terminal
+  eval "$(/opt/homebrew/bin/brew shellenv)"                                         # Apply Homebrew settings immediately without restarting the terminal
 
   # brew --version
   ```
@@ -141,20 +141,20 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
 
   ```bash
   which -a python python3  # List all Python / Python3 executables in PATH
-  which python python3  # Show the default Python / Python3 in use
+  which python python3     # Show the default Python / Python3 in use
   ```
 
 -
 
   ```bash
-  conda env list                 # List all Conda environments
+  conda env list                  # List all Conda environments
   conda env remove -n <env-name>  # Remove a Conda environment
-  conda clean --all              # Free up disk space by removing unused packages and caches
+  conda clean --all               # Free up disk space by removing unused packages and caches
   ```
 
 -
 
   ```bash
-  jupyter kernelspec list  # List all available Jupyter kernels (Use the Jupyter installation currently on your PATH)
+  jupyter kernelspec list                  # List all available Jupyter kernels (Use the Jupyter installation currently on your PATH)
   jupyter kernelspec remove <kernel-name>  # Remove a specific Jupyter kernel
   ```
