@@ -24,7 +24,6 @@ Best for general Python, web development, and small projects. Lightweight, fast,
     eval "$(/opt/homebrew/bin/brew shellenv)"
     # Apply Homebrew settings immediately without restarting the terminal
 
-    ####################
     # brew --version
     ```
 
@@ -35,19 +34,12 @@ Best for general Python, web development, and small projects. Lightweight, fast,
     # Installed as: /opt/homebrew/bin/python3
 
     brew cleanup python@3.13
-    # Removes outdated files (does NOT uninstall Python)
+    # Remove outdated files (does NOT uninstall Python)
 
-    ####################
     # python3 --version
-
-    # which -a python python3
-    # List all Python/Python3 executables in PATH
-
-    # which python python3
-    # Show the default Python/Python3 in use
     ```
 
-- **Step 4. Install `uv` (a fast Python package and environment manager)**:
+- **Step 4. Install `uv` (fast Python package and environment manager)**:
   - [Info](https://github.com/astral-sh/uv)
   - Run in Terminal
     ```bash
@@ -59,21 +51,20 @@ Best for general Python, web development, and small projects. Lightweight, fast,
     ```bash
     uv init
 
-    ####################
     # This automatically:
-    #  - Create `pyproject.toml` if it does not already exist
-    #  - Create or reuse a virtual environment (`.venv`) 
-    #    - If `.venv/` exists, `uv` uses its Python interpreter
-    #    - Otherwise, `uv` creates one using the default python3 on your PATH
+    #  - Creates `pyproject.toml` if missing
+    #  - Creates or reuses a virtual environment (`.venv`) 
+    #    - If `.venv` exists, uses its Python interpreter
+    #    - Otherwise, creates one using the default `python3` from PATH
     #      - To use a specific version, run `python3.13 -m venv .venv` before `uv init`
-    #  - Optionally generate uv.lock
-    #  - Detect existing dependencies
+    #  - Optionally generates `uv.lock`
+    #  - Detects existing dependencies
 
     # uv run python <name>.py
     # Run Python scripts
     ```
 
-- **Step 6. Install packages**:
+- **Step 6. Install dependencies**:
   - Run in Terminal
     ```bash
     uv add regex torch torchvision PyYAML matplotlib requests tqdm notebook
@@ -81,10 +72,9 @@ Best for general Python, web development, and small projects. Lightweight, fast,
     ```
 
 
-### 1. Method 2 -- Conda
+### 2. Method 2 -- Conda
 
-Best for data science, machine learning, and scientific computing.
-Heavier, but handles complex libraries well.
+Best for data science, machine learning, and scientific computing. Heavier, but handles complex libraries well.
 
 - **Step 1. Install Miniconda**
   - [Download and install](https://www.anaconda.com/docs/getting-started/miniconda/main)
@@ -93,36 +83,61 @@ Heavier, but handles complex libraries well.
   - Run in Terminal
     ```bash
     conda env create -f environment.yaml
-  
-    ####################
-    # conda env list
-    # conda env remove --n <envname>
-    # conda clean --all # Free up disk space
     ```
 
-    Here is an example of an [`environment.yaml`](/files/environment.yaml) file.
+    Example: [`environment.yaml`](/files/environment.yaml)
 
-- **Step 3a. Install JupyterLab (with automatic kernel setup, recommended)**
-  - Run in Terminal
-    ```bash
-    conda create -n jupyter_env python=3.14 jupyterlab nb_conda_kernels -c conda-forge
-
-    # conda activate jupyter_env
-    # jupyter lab
-
-    # jupyter kernelspec list
-    # jupyter kernelspec remove <kernelname>
-    ```
-
-    `nb_conda_kernels` allows Jupyter to automatically detect all Conda environments as usable kernels.
-
-- **Step 3b. Install JupyterLab (with manual kernel setup)**
+- **Step 3. Create a Python Jupyter environment (for running JupyterLab)**
   - Run in Terminal
     ```bash
     conda create -n jupyter_env python=3.14 jupyterlab -c conda-forge
 
+    # conda activate jupyter_env
+    # jupyter lab
+    # conda deactivate
+    ```
+
+- **Step 4a (recommended; choose either 4a or 4b). Enable automatic Jupyter kernel discovery**
+  - Run in Terminal
+    ```bash
+    conda activate jupyter_env
+    conda install nb_conda_kernels -c conda-forge
+    conda deactivate
+    ```
+  
+    `nb_conda_kernels` allows JupyterLab to automatically detect all Conda environments as usable kernels.
+
+- **Step 4b (choose either 4a or 4b). Configure a Jupyter kernel manually**
+  - Run in Terminal
+    ```bash
     conda activate <envname>
     conda install ipykernel -c anaconda
     ipython kernel install --user --name=<kernelname>
     conda deactivate
     ```
+
+### 3. Extra Useful Commands
+
+  ```
+  which -a python python3
+  # List all Python / Python3 executables in PATH
+
+  which python python3
+  # Show the default Python / Python3 in use
+
+  conda env list
+  # List all Conda environments
+
+  conda env remove -n <envname>
+  # Remove a Conda environment
+
+  conda clean --all 
+  # Free up disk space by removing unused packages and caches
+
+  jupyter kernelspec list
+  # List all available Jupyter kernels
+  # (Use the Jupyter installation currently on your PATH)
+
+  jupyter kernelspec remove <kernelname>
+  # Remove a specific Jupyter kernel
+  ```
