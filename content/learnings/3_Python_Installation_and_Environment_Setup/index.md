@@ -6,7 +6,7 @@ summary: "Python"
 tags: [""]
 ---
 
-### 1. Method 1 -- VS Code + Homebrew + `uv`
+## Method 1 -- VS Code + Homebrew + `uv`
 
 Best for general Python, web development, and small projects. Lightweight, fast, and modern.
 
@@ -23,11 +23,8 @@ Best for general Python, web development, and small projects. Lightweight, fast,
   Then add Homebrew to your PATH, by running in Terminal
 
   ```bash
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<username>/.zprofile
-  # Ensure Homebrew is available in new terminal sessions
-
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-  # Apply Homebrew settings immediately without restarting the terminal
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<user-name>/.zprofile  # Ensure Homebrew is available in new terminal sessions
+  eval "$(/opt/homebrew/bin/brew shellenv)"                                        # Apply Homebrew settings immediately without restarting the terminal
 
   # brew --version
   ```
@@ -37,11 +34,8 @@ Best for general Python, web development, and small projects. Lightweight, fast,
   Run in Terminal
 
   ```bash
-  brew install python@3.13
-  # Installed as: /opt/homebrew/bin/python3
-
-  brew cleanup python@3.13
-  # Remove outdated files (does NOT uninstall Python)
+  brew install python@3.13  # Installed as: /opt/homebrew/bin/python3
+  brew cleanup python@3.13  # Remove outdated files (does NOT uninstall Python)
 
   # python3 --version
   ```
@@ -72,7 +66,7 @@ Best for general Python, web development, and small projects. Lightweight, fast,
   #  - Optionally generates `uv.lock`
   #  - Detects existing dependencies
 
-  # uv run python <name>.py
+  # uv run python <script-name>.py
   # Run Python scripts
   ```
 
@@ -82,11 +76,11 @@ Best for general Python, web development, and small projects. Lightweight, fast,
 
   ```bash
   uv add regex torch torchvision PyYAML matplotlib requests tqdm notebook
-  # uv add numpy pandas
   ```
 
+---
 
-### 2. Method 2 -- Conda
+## Method 2 -- Conda
 
 Best for data science, machine learning, and scientific computing. Heavier, but handles complex libraries well.
 
@@ -133,40 +127,34 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
   Run in Terminal
 
   ```bash
-  conda activate <envname>
+  conda activate <env-name>
   conda install ipykernel -c anaconda
-  ipython kernel install --user --name=<kernelname>
+  ipython kernel install --user --name=<kernel-name>
   conda deactivate
   ```
 
-### 3. Extra Useful Commands
+---
 
-  - 
-    ```bash
-    which -a python python3
-    # List all Python / Python3 executables in PATH
+## Extra Useful Commands
 
-    which python python3
-    # Show the default Python / Python3 in use
-    ```
-  - 
-    ```bash
-    conda env list
-    # List all Conda environments
+-
 
-    conda env remove -n <envname>
-    # Remove a Conda environment
+  ```bash
+  which -a python python3  # List all Python / Python3 executables in PATH
+  which python python3  # Show the default Python / Python3 in use
+  ```
 
-    conda clean --all 
-    # Free up disk space by removing unused packages and caches
-    ```
-    
-  - 
-    ```bash
-    jupyter kernelspec list
-    # List all available Jupyter kernels
-    # (Use the Jupyter installation currently on your PATH)
+-
 
-    jupyter kernelspec remove <kernelname>
-    # Remove a specific Jupyter kernel
-    ```
+  ```bash
+  conda env list                 # List all Conda environments
+  conda env remove -n <env-name>  # Remove a Conda environment
+  conda clean --all              # Free up disk space by removing unused packages and caches
+  ```
+
+-
+
+  ```bash
+  jupyter kernelspec list  # List all available Jupyter kernels (Use the Jupyter installation currently on your PATH)
+  jupyter kernelspec remove <kernel-name>  # Remove a specific Jupyter kernel
+  ```

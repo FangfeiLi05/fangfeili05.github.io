@@ -6,7 +6,7 @@ summary: "Artificial Intelligence Professional Program - Stanford"
 tags: []
 ---
 
-#### Lectures Videos ([YouTube](https://www.youtube.com/playlist?list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8))
+## Lectures Videos ([YouTube](https://www.youtube.com/playlist?list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8))
 
 - [Lecture 1 - Introduction](https://www.youtube.com/watch?v=XZ0PMRWXBEU&list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8&index=1)
 - [Lecture 2 - Background](https://www.youtube.com/watch?v=rNEujZmD2Tg&list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8&index=2)
@@ -27,9 +27,9 @@ tags: []
 - [Lecture 17 - Discrete Latent Variable Models](https://www.youtube.com/watch?v=vBv7Mf1zsg8&list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8&index=17)
 - [Lecture 18 - Diffusion Models for Discrete Data](https://www.youtube.com/watch?v=mCaRNnEnYwA&list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8&index=18)
 
-<br>
+---
 
-#### Other Link
+## Other Link
 
 - [Course Webpage](https://deepgenerativemodels.github.io/)
 - [Lecture Notes](https://deepgenerativemodels.github.io/notes/)
@@ -38,16 +38,16 @@ tags: []
 - Book: Deep Learning - Ian Goodfellow, Yoshua Bengio, and Aaron Courville ([PDF Download](https://www.deeplearningbook.org/))
 - Probabilistic Machine Learning: Advanced Topics - Kevin Patrick Murphy, p771--924 (IV Generation)
 ([Info](https://probml.github.io/pml-book/book2.html) | [PDF Download](https://github.com/probml/pml2-book))
-  - Chapter 21 Variational autoencoders 
+  - Chapter 21 Variational autoencoders
   - Chapter 22 Autoregressive models
   - Chapter 23 Normalizing flows
   - Chapter 24 Energy-based models
   - Chapter 25 Diffusion models
   - Chapter 26 Generative adversarial networks
 
-<br>
+---
 
-#### My Notes
+## My Notes
 
 - Part 1 - Introduction & Background: [View PDF]()
 - Part 2 - Autoregressive Models (AR): [View PDF]()
