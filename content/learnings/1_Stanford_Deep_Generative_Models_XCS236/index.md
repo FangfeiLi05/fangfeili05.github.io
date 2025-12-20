@@ -47,7 +47,7 @@ tags: []
   Chapter 25 - Diffusion models  
   Chapter 26 - Generative adversarial networks
 
-- My Notes ([PDF Download](/files/my_notes_XCS236.pdf))  
+- My Notes ([View PDF](/files/my_notes_XCS236.pdf))  
   Part 1 - Introduction & Background
   Part 2 - Autoregressive Models (AR)  
   Part 3 - Maximum Likelihood Learning (MLE)  
