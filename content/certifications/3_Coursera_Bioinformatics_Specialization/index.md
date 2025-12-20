@@ -6,39 +6,33 @@ summary: "In Progress"
 tags: []
 ---
 
-## Links
+## Program Overview
 
-- [Homepage](https://www.coursera.org/specializations/bioinformatics)
-- [Certificate]() todo 
+- [Program Homepage](https://www.coursera.org/specializations/bioinformatics)
+- Program Certificate (N/A)
 
 ---
 
-## Courses (7 total)
+## Course List (7 total)
 
-1. **Finding Hidden Messages in DNA (Bioinformatics I)**  
-   - [Course Page](https://www.coursera.org/learn/dna-analysis?specialization=bioinformatics)  
-   - [Course Certificate]() todo
+- **Finding Hidden Messages in DNA (Bioinformatics I)**  
+  [Course Page](https://www.coursera.org/learn/dna-analysis?specialization=bioinformatics) | Certificate (N/A)
 
-2. **Genome Sequencing (Bioinformatics II)**  
-   - [Course Page](https://www.coursera.org/learn/genome-sequencing?specialization=bioinformatics)  
-   - [Course Certificate]() todo
+- **Genome Sequencing (Bioinformatics II)**  
+  [Course Page](https://www.coursera.org/learn/genome-sequencing?specialization=bioinformatics) | Certificate (N/A)
 
-3. **Comparing Genes, Proteins, and Genomes (Bioinformatics III)**  
-   - [Course Page](https://www.coursera.org/learn/comparing-genomes?specialization=bioinformatics)  
-   - [Course Certificate]() todo
+- **Comparing Genes, Proteins, and Genomes (Bioinformatics III)**  
+  [Course Page](https://www.coursera.org/learn/comparing-genomes?specialization=bioinformatics) | Certificate (N/A)
 
-4. **Molecular Evolution (Bioinformatics IV)**  
-   - [Course Page](https://www.coursera.org/learn/molecular-evolution?specialization=bioinformatics)  
-   - [Course Certificate]() todo
+- **Molecular Evolution (Bioinformatics IV)**  
+  [Course Page](https://www.coursera.org/learn/molecular-evolution?specialization=bioinformatics) | Certificate (N/A)
 
-5. **Genomic Data Science and Clustering (Bioinformatics V)**  
-   - [Course Page](https://www.coursera.org/learn/genomic-data?specialization=bioinformatics)  
-   - [Course Certificate]() todo
+- **Genomic Data Science and Clustering (Bioinformatics V)**  
+  [Course Page](https://www.coursera.org/learn/genomic-data?specialization=bioinformatics) | Certificate (N/A)
 
-6. **Finding Mutations in DNA and Proteins (Bioinformatics VI)**  
-   - [Course Page](https://www.coursera.org/learn/dna-mutations?specialization=bioinformatics)  
-   - [Course Certificate]() todo
+- **Finding Mutations in DNA and Proteins (Bioinformatics VI)**  
+  [Course Page](https://www.coursera.org/learn/dna-mutations?specialization=bioinformatics) | Certificate (N/A)
 
-7. **Bioinformatics Capstone: Big Data in Biology**  
-   - [Course Page](https://www.coursera.org/learn/bioinformatics-project?specialization=bioinformatics)  
-   - [Course Certificate]() todo
+
+- **Bioinformatics Capstone: Big Data in Biology**  
+  [Course Page](https://www.coursera.org/learn/bioinformatics-project?specialization=bioinformatics) | Certificate (N/A)

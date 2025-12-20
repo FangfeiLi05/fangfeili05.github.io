@@ -101,7 +101,7 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
 - **Step 3. Create a Python Jupyter environment (for running JupyterLab)**
   
   Run in Terminal
-  
+
   ```bash
   conda create -n jupyter_env python=3.14 jupyterlab -c conda-forge
 

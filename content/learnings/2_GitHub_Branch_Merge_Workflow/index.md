@@ -59,7 +59,7 @@ git push origin --delete dev
 - **Step 1. Create a new `dev` branch**
 
   ```bash
-  git switch -c dev  # Create and switch to the dev branch
+  git switch -c dev       # Create and switch to the dev branch
   git push -u origin dev  # Push dev to remote and set upstream (first push only)
   ```
 
