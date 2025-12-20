@@ -10,17 +10,10 @@ tags: [""]
 
 Best for general Python, web development, and small projects. Lightweight, fast, and modern.
 
-- **Step 1. Install VS Code**
-  
-  [Info](https://code.visualstudio.com/docs/introvideos/basics)
-  
-  [Download & Install](https://code.visualstudio.com/download)
+- **Step 1. Install [VS Code](https://code.visualstudio.com/docs/introvideos/basics):** [Download & Install](https://code.visualstudio.com/download)
 
-- **Step 2. Install Homebrew**
-  
-  [Install](https://brew.sh/)
-  
-  Then add Homebrew to your PATH, by running in Terminal
+- **Step 2. Install Homebrew:** [Install](https://brew.sh/)  
+  Then add Homebrew to your PATH
 
   ```bash
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<user-name>/.zprofile  # Ensure Homebrew is available in new terminal sessions
@@ -29,9 +22,7 @@ Best for general Python, web development, and small projects. Lightweight, fast,
   # brew --version
   ```
 
-- **Step 3. Install Python**:
-  
-  Run in Terminal
+- **Step 3. Install Python:**
 
   ```bash
   brew install python@3.13  # Installed as: /opt/homebrew/bin/python3
@@ -40,19 +31,13 @@ Best for general Python, web development, and small projects. Lightweight, fast,
   # python3 --version
   ```
 
-- **Step 4. Install `uv` (fast Python package and environment manager)**:
-  
-  [Info](https://github.com/astral-sh/uv)
-  
-  Run in Terminal
-  
+- **Step 4. Install [`uv`](https://github.com/astral-sh/uv) (fast Python package and environment manager):**  
+
   ```bash
   curl -LsSf https://astral.sh/uv/install.sh | sh
   ```
 
-- **Step 5. Create a Python project environment**:
-  
-  Run in Terminal
+- **Step 5. Create a Python project environment:**
 
   ```bash
   uv init
@@ -65,14 +50,9 @@ Best for general Python, web development, and small projects. Lightweight, fast,
   #      - To use a specific version, run `python3.13 -m venv .venv` before `uv init`
   #  - Optionally generates `uv.lock`
   #  - Detects existing dependencies
-
-  # uv run python <script-name>.py
-  # Run Python scripts
   ```
 
-- **Step 6. Install dependencies**:
-  
-  Run in Terminal
+- **Step 6. Install dependencies:**
 
   ```bash
   uv add regex torch torchvision PyYAML matplotlib requests tqdm notebook
@@ -84,13 +64,9 @@ Best for general Python, web development, and small projects. Lightweight, fast,
 
 Best for data science, machine learning, and scientific computing. Heavier, but handles complex libraries well.
 
-- **Step 1. Install Miniconda**
-  
-  [Download and install](https://www.anaconda.com/docs/getting-started/miniconda/main)
+- **Step 1. Install Miniconda:** [Download & Install](https://www.anaconda.com/docs/getting-started/miniconda/main)
 
-- **Step 2. Create a Python project environment and install dependencies**:
-  
-  Run in Terminal
+- **Step 2. Create a Python project environment and install dependencies:**
   
   ```bash
   conda env create -f environment.yaml
@@ -98,9 +74,7 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
 
   Example: [`environment.yaml`](/files/environment.yaml)
 
-- **Step 3. Create a Python Jupyter environment (for running JupyterLab)**
-  
-  Run in Terminal
+- **Step 3. Create a Python Jupyter environment (for running JupyterLab):**
 
   ```bash
   conda create -n jupyter_env python=3.14 jupyterlab -c conda-forge
@@ -110,9 +84,7 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
   # conda deactivate
   ```
 
-- **Step 4a (recommended; choose either 4a or 4b). Enable automatic Jupyter kernel discovery**
-  
-  Run in Terminal
+- **Step 4a (recommended; choose either 4a or 4b). Enable automatic Jupyter kernel discovery:**
 
   ```bash
   conda activate jupyter_env
@@ -122,9 +94,7 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
   
   `nb_conda_kernels` allows JupyterLab to automatically detect all Conda environments as usable kernels.
 
-- **Step 4b (choose either 4a or 4b). Configure a Jupyter kernel manually**
-  
-  Run in Terminal
+- **Step 4b (choose either 4a or 4b). Configure a Jupyter kernel manually:**
 
   ```bash
   conda activate <env-name>
@@ -137,24 +107,23 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
 
 ## Extra Useful Commands
 
--
+```bash
+which -a python python3  # List all Python / Python3 executables in PATH
+which python python3     # Show the default Python / Python3 in use
+```
 
-  ```bash
-  which -a python python3  # List all Python / Python3 executables in PATH
-  which python python3     # Show the default Python / Python3 in use
-  ```
+```bash
+conda env list                  # List all Conda environments
+conda env remove -n <env-name>  # Remove a Conda environment
+conda clean --all               # Free up disk space by removing unused packages and caches
+```
 
--
+```bash
+uv run python <script-name>.py
+# Run Python scripts
+```
 
-  ```bash
-  conda env list                  # List all Conda environments
-  conda env remove -n <env-name>  # Remove a Conda environment
-  conda clean --all               # Free up disk space by removing unused packages and caches
-  ```
-
--
-
-  ```bash
-  jupyter kernelspec list                  # List all available Jupyter kernels (Use the Jupyter installation currently on your PATH)
-  jupyter kernelspec remove <kernel-name>  # Remove a specific Jupyter kernel
-  ```
+```bash
+jupyter kernelspec list                  # List all available Jupyter kernels (Use the Jupyter installation currently on your PATH)
+jupyter kernelspec remove <kernel-name>  # Remove a specific Jupyter kernel
+```
