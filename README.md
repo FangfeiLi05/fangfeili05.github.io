@@ -1,7 +1,7 @@
 # fangfeili05.github.io — Personal Website (Source Code)
 
-This repository contains the Hugo-based source code for my personal website:  
-[**fangfeili05.github.io**](https://fangfeili05.github.io/). 
+This repository contains the Hugo-based source code for my personal website:
+[**fangfeili05.github.io**](https://fangfeili05.github.io/).
 
 The site is built using the [**Hugo**](https://github.com/gohugoio/hugo) static site generator with the [**Congo**](https://github.com/jpanther/congo) theme.
 
@@ -9,17 +9,17 @@ The site is built using the [**Hugo**](https://github.com/gohugoio/hugo) static 
 
 ## 🚀 Tech Stack
 
-- **Hugo** (extended version) — site generator  
-- **Congo** — theme  
-- **TailwindCSS** — custom styling  
-- **Markdown** — all content  
-- **GitHub Pages + GitHub Actions** — deployment  
+- **Hugo** (extended version) — site generator
+- **Congo** — theme (For details, see the [**Congo documentation**](https://jpanther.github.io/congo/docs/))
+- **TailwindCSS** — custom styling
+- **Markdown** — all content
+- **GitHub Pages + GitHub Actions** — deployment
 
 ---
 
 ## 📚 Content Structure
 
-```
+```bash
 root/
 │
 ├── config/                     # 1. Site configuration
@@ -58,147 +58,145 @@ root/
 
 ## License
 
-- **Source code:** [MIT License](LICENSE.md)  
+- **Source code:** [MIT License](LICENSE.md)
 - **Content:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (unless noted otherwise)
 
 ---
 
-## Set Up & Usage
+## Setup & Usage
 
-For theme details, see the [**Congo documentation**](https://jpanther.github.io/congo/docs/)
+### 1. Install dependencies (macOS)
 
-### Install Dependencies (macOS example)
-
-Required tools: `Git` (extended), `Go`, `Node.js`, `HUGO`
+- Install required tools: `Git` (extended), `Go`, `Node.js`, and `Hugo`
+- (Optional) Install `TailwindCSS` for custom styling
 
 ```bash
 brew install git go node hugo
-
-git --version
-go version
-node -v
-hugo version 
-```
-
-Install `TailwindCSS` (for custom styling)
-
-```
 npm install -D tailwindcss postcss autoprefixer
 ```
 
-### Create Your Project
+- Verify installation (optional):
 
-Create a new GitHub repo named `<repo-name>`
+  ```bash
+  git --version
+  go version
+  node -v
+  hugo version 
+  ```
 
-reate a new Hugo site
+### 2. Create the project (local)
 
-```bash
-hugo new site <repo-name>
-cd <repo-name>
-```
+- Create a new Hugo site named `<site-name>` and initialize Git locally:
 
-Initialize Git
+  ```bash
+  hugo new site <site-name>
+  cd <site-name>
 
-```bash
-git init
-git branch -M main
-git remote add origin https://github.com/<user-name>/<repo-name>.git
-```
+  git init
+  git branch -M main
+  ```
 
-### Initialize Hugo modules
+### 3. Create the GitHub repository (remote)
 
-```bash
-hugo mod init github.com/<user-name>//<repo-name>
-```
+- Create a new empty repository on GitHub named `<site-name>`
 
-Add Congo theme
+### 4. Connect and push to GitHub
 
-Create the `config/_default/module.toml`
+- Connect the local repository to GitHub and push the initial commit:
 
-```bash
-mkdir -p config/_default
+  ```bash
+  git remote add origin https://github.com/<username>/<site-name>.git
+  git add .
+  git commit -m "Initial commit"
+  git push -u origin main  # -u, --set-upstream (set upstream): first push only
+  ```
 
-touch module.toml
-# with content 
-[[imports]]
-path = "github.com/jpanther/congo/v2"
-```
+### 5. Download and install the Congo theme
 
-Start local development server (also automatically downloads the theme)
+- Initialize the Hugo module:
 
-```bash
-hugo server
-```
+  ```bash
+  hugo mod init github.com/<username>/<site-name>
+  ```
 
-Visit: http://localhost:1313
+- Add the Congo theme by creating the file `config/_default/module.toml` with the content shown in the example [`module.toml`](./config/_default/module.toml), by running in the terminal:
 
+  ```bash
+  mkdir -p config/_default
 
-### Configure the Site
+  cat <<'EOF' > config/_default/module.toml
+  [[imports]]
+  path = "github.com/jpanther/congo/v2"
+  EOF
+  ```
 
-Remove the default config
+- Start the local development server (the theme will be downloaded automatically).
+  Visit: [http://localhost:1313](http://localhost:1313)
 
-```bash
-rm hugo.toml
-```
+  ```bash
+  hugo server
+  ```
 
-Copy Congo’s default config files
-(except `module.toml`) from [link](https://github.com/jpanther/congo/tree/dev/config/_default), into
+### 6. Set up theme configuration files
 
-```bash
-config/_default/
-``` 
+- Remove the default config `hugo.toml`:
 
-Add `.gitignore`
+  ```bash
+  rm hugo.toml
+  ```
 
-```bash
-touch .gitignore
+- Copy Congo’s default configuration files (except `module.toml`) from [here](https://github.com/jpanther/congo/tree/dev/config/_default) into `config/_default/`.
 
-# Add the following:
-# public/
-# resources/
-# .hugo_build.lock
-# .DS_Store
-```
+### 7. Extra
 
+- Add `.gitignore`
 
-First Commit
+  ```bash
+  touch .gitignore
 
-```bash
-git add .
-git commit -m "Initialize Hugo module"
-git push --set-upstream origin main  # First push (set upstream)
-git push
-```
+  cat <<'EOF' >> .gitignore
+  public/
+  resources/
+  .hugo_build.lock
+  .DS_Store
+  EOF
+  ```
 
-### Depoly in Github
+- Commit Changes
 
-Rename repo from `<repo-name>` to `<user-name>.github.io`
+  ```bash
+  git add .
+  git commit -m "Hugo module setup"
+  git push
+  ```
 
-Add GitHub Actions workflow
-```
-mkdir -p .github/worflows
-```
+### 8. Depoly in Github
 
-Copy your `hugo.yaml` workflow file into this folder.
+- Rename the repository from `<site-name>` to `<username>.github.io`
 
+- Update the Git remote to reflect the renamed repository.
 
-Enable Deployment (GitHub Pages + GitHub Actions) 
-[Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). 
+  ```bash
+  git remote set-url origin https://github.com/<username>/<username>.github.io.git
+  git remote -v
+  ```
 
+- Add a GitHub Actions workflow by creating the directory `.github/worflows/` and copying the workflow file [`hugo.yaml`](./hugo.yaml) into it.
 
-Update your Git remote (since repo name changed)
+  ```bash
+  mkdir -p .github/worflows
+  ```
 
-```bash
-git remote set-url origin https://github.com/<user-name>/<user-name>.github.io.git
-git remote -v
-```
+- Enable deployment using **GitHub Pages** with **GitHub Actions**, following the guide: [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
 
-- Online Deployment
-```
-git add .
-git commit -m "Deploy Hugo module"
-git push
-```
+- Deploy online:
+
+  ```bash
+  git add .
+  git commit -m "Deploy Hugo site"
+  git push
+  ```
+
 
 <!-- 
 ### Customize Congo Settings
@@ -213,7 +211,7 @@ list.groupByYear = false
 article.showTableOfContents
 
 - config -> _default -> hugo.toml
-baseURL = "https://<user-name>.github.io/"
+baseURL = "https://<username>.github.io/"
 
 Add
 - assets:
