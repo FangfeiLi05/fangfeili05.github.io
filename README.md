@@ -74,7 +74,7 @@ root/
   npm install -D tailwindcss postcss autoprefixer
   ```
 
-- Verify installation (optional):
+- (Optional) Verify installation:
 
   ```bash
   git --version
