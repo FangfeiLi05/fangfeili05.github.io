@@ -4,9 +4,8 @@ description: "List of course certifications"
 
 cascade:
   showReadingTime: false
-  showEdit: false
   showSummary: true
-  showTableOfContents: false
+  groupByYear: false
 ---
 
 This is a list of course certifications.

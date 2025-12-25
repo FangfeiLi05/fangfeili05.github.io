@@ -1,12 +1,11 @@
 ---
-title: "Reseach Papers"
+title: "Research Papers"
 description: "List of research papers"
 
 cascade:
   showReadingTime: false
-  showEdit: false
   showSummary: true
-  showTableOfContents: false
+  groupByYear: false
 ---
 
 This is a list of research papers.

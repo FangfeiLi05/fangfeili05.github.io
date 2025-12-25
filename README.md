@@ -1,7 +1,7 @@
 # fangfeili05.github.io — Personal Website (Source Code)
 
 This repository contains the source code for my personal website:
-[**fangfeili05.github.io**](https://fangfeili05.github.io/).
+[**https://fangfeili05.github.io**](https://fangfeili05.github.io).
 
 The site is built with [**Hugo**](https://github.com/gohugoio/hugo) using the [**Congo**](https://github.com/jpanther/congo) theme and deployed via **GitHub Pages**.
 
@@ -11,11 +11,11 @@ The site is built with [**Hugo**](https://github.com/gohugoio/hugo) using the [*
 
 ### 1. Tech Stack
 
-- **Hugo** (extended) — static site generator
-- **Congo** - theme (For details, see the [**Congo documentation**](https://jpanther.github.io/congo/docs/))
-- **TailwindCSS** — custom styling
-- **Markdown** — content
-- **GitHub Pages + GitHub Actions** — deployment
+- **Hugo** (extended) - static site generator
+- **Congo** - theme (For details, [**Congo documentation**](https://jpanther.github.io/congo/docs/))
+- **TailwindCSS** - custom styling
+- **Markdown** - content
+- **GitHub Pages + GitHub Actions** - deployment
 
 ### 2. Project Structure
 
@@ -35,7 +35,7 @@ root/
 │   ├── resume/                 → https://fangfeili05.github.io/resume/
 │   ├── papers/                 → https://fangfeili05.github.io/papers/
 │   ├── certifications/         → https://fangfeili05.github.io/certifications/
-│   └── learnings/              → https://fangfeili05.github.io/learnings/
+│   └── notes/                  → https://fangfeili05.github.io/notes/
 │
 ├── layouts/                    # Custom templates / overrides
 │   ├── _partials/
@@ -82,7 +82,7 @@ root/
   ```
 
 - (Optional) Install `TailwindCSS` for custom styling:
-  
+
   ```bash
   brew install git go node hugo
   npm install -D tailwindcss postcss autoprefixer
@@ -176,7 +176,7 @@ root/
   git push
   ```
 
-### 8. Depoly to GitHub Pages
+### 8. Deploy to GitHub Pages
 
 - Rename the repository from `<site-name>` to `<username>.github.io`
 
@@ -205,40 +205,128 @@ root/
 
   Site will be live at: `https://<username>.github.io/`
 
+---
+
+## Usage Guide
+
+### 1. Modify Config Files
+
+- Modify `hugo.toml`.
+  
+  From:
+
+  ```bash
+  # baseURL = "https://your_domain.com/"
+  ```
+
+  To:
+
+  ```bash
+  baseURL = "https://<username>.github.io/"
+  ```
+
+- Modify `params.toml`
+
+  From:
+
+  ```bash
+  colorScheme = "congo"
+  enableSearch = false
+  footer.showAppearanceSwitcher = false
+  homepage.layout = "page"
+  ```
+
+  To:
+
+  ```bash
+  colorScheme = "fire"
+  enableSearch = true
+  footer.showAppearanceSwitcher = true
+  homepage.layout = "profile"
+  ```
+
+- Modify `menus.en.toml`.
+
+  From:
+
+  ```bash
+  [[main]]
+    name = "Blog"
+    pageRef = "posts"
+    weight = 10
+
+  [[main]]
+    name = "Categories"
+    pageRef = "categories"
+    weight = 20
+
+  [[main]]
+    name = "Tags"
+    pageRef = "tags"
+    weight = 30
+  ```
+  
+  To:
+
+  ```bash
+  [[main]]
+    name = "Resume"
+    pageRef = "resume"
+    #url = "/files/resume_FL_20251201.pdf"
+    weight = 10
+
+  [[main]]
+    name = "Papers"
+    pageRef = "papers"
+    weight = 20
+
+  [[main]]
+    name = "Certifications"
+    pageRef = "certifications"
+    weight = 30
+
+  [[main]]
+    name = "Notes"
+    pageRef = "notes"
+    weight = 40
+  ```
+
+- Modify `languages.en.toml`.
+
+  From:
+
+  ```bash
+  title = "Congo"
+  # copyright = "Copy, _right?_ :thinking_face:"
+  # params.author.name = "Your name here"
+  # params.author.image = "img/author.jpg"
+  ```
+
+  To:
+
+  ```bash
+  title = "FLi | Homepage"
+  copyright = "Copyright © 2025, Fangfei Li. All rights reserved."
+  params.author.name = "Fangfei Li"
+  params.author.image = "img/author.jpg"
+  ```
+
+### 2. Useful Links
+
+- [https://favicon.io/favicon-converter/](https://favicon.io/favicon-converter/)
+
+- [https://wallpapercave.com/1600x1200-wallpapers](https://wallpapercave.com/1600x1200-wallpapers)
+
 <!-- 
-### Customize Congo Settings
-
-- Modify
-- config -> _default -> languages.en.toml
-title = "Homepage"
-
-- config -> _default -> params.toml
-homepage.layout = "profile"
-list.groupByYear = false
-article.showTableOfContents
-
-- config -> _default -> hugo.toml
-baseURL = "https://<username>.github.io/"
-
 Add
 - assets:
 img -> author.jpg
 
 layouts/list.html
 
-
-useful web
-https://favicon.io/favicon-converter/
-https://wallpapercave.com/1600x1200-wallpapers
-
-
 - Optional Cleanup (.DS_Store files on macOS)
 ```
 find . -name '.DS_Store' -type f
 find . -name '.DS_Store' -type f -delete
-
-echo .DS_Store >> .gitignore
-git add .gitignore
-git commit -m "Ignore .DS_Store files"
 ```
 -->
