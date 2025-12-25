@@ -67,13 +67,12 @@ root/
 
 ### 1. Install dependencies (macOS)
 
-- Install required tools: `Git` (extended), `Go`, `Node.js`, and `Hugo`
-- (Optional) Install `TailwindCSS` for custom styling
+- Install required tools `Git` (extended), `Go`, `Node.js`, and `Hugo`:
 
-```bash
-brew install git go node hugo
-npm install -D tailwindcss postcss autoprefixer
-```
+  ```bash
+  brew install git go node hugo
+  npm install -D tailwindcss postcss autoprefixer
+  ```
 
 - Verify installation (optional):
 
@@ -82,6 +81,13 @@ npm install -D tailwindcss postcss autoprefixer
   go version
   node -v
   hugo version 
+  ```
+
+- (Optional) Install `TailwindCSS` for custom styling:
+  
+  ```bash
+  brew install git go node hugo
+  npm install -D tailwindcss postcss autoprefixer
   ```
 
 ### 2. Create the project (local)
@@ -181,10 +187,10 @@ npm install -D tailwindcss postcss autoprefixer
   git remote -v
   ```
 
-- Add a GitHub Actions workflow by creating the directory `.github/worflows/` and copying the workflow file [`hugo.yaml`](./hugo.yaml) into it.
+- Add a GitHub Actions workflow by creating the directory `.github/workflows/` and copying the workflow file [`hugo.yml`](./.github/workflows/hugo.yml) into it.
 
   ```bash
-  mkdir -p .github/worflows
+  mkdir -p .github/workflows
   ```
 
 - Enable deployment using **GitHub Pages** with **GitHub Actions**, following the guide: [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
