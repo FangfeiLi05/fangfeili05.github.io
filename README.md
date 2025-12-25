@@ -232,6 +232,8 @@ root/
   ```bash
   colorScheme = "congo"
   enableSearch = false
+  # header.logo = "img/logo.jpg"
+  # header.logoDark = "img/dark-logo.jpg"
   footer.showAppearanceSwitcher = false
   homepage.layout = "page"
   ```
@@ -241,6 +243,8 @@ root/
   ```bash
   colorScheme = "fire"
   enableSearch = true
+  header.logo = "img/logo.jpg"
+  header.logoDark = "img/dark-logo.jpg"
   footer.showAppearanceSwitcher = true
   homepage.layout = "profile"
   ```
