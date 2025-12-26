@@ -337,7 +337,7 @@ root/
 
 - [https://wallpapercave.com/1600x1200-wallpapers](https://wallpapercave.com/1600x1200-wallpapers)
 
-
+- [https://applegamer22.github.io/posts/hugo/](https://applegamer22.github.io/posts/hugo/)
 <!-- 
 Add
 - assets:

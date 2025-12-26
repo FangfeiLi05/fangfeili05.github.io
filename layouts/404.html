@@ -1,0 +1,21 @@
+{{define "main"}}
+	<h1 class="mb-3 text-4xl font-extrabold">{{i18n "error.404_title" | emojify}}</h1>
+	<h3 class="my-3 text-neutral-400 dark:text-neutral-500 text-3xl font-bold">
+		<code>{{i18n "error.404_error" | emojify}}</code>
+	</h3>
+	<div class="max-w-prose prose dark:prose-invert">
+		<p>{{i18n "error.404_description" | emojify}}</p>
+		<p>I hope you'll find what you have been looking for in my website. At the meantime, here is a GIF...</p>
+		<figure>
+			<img class="mx-auto my-0 rounded-md" style="width: 75%;" src="/404.gif" loading="lazy">
+			<figcaption class="text-center">
+				Hopefully <a class="text-primary-400 decoration-neutral-600 underline hover:text-neutral hover:bg-primary-600 hover:no-underline" href="https://youtu.be/wJZbx3muGTA" target="_blank" rel="noreferrer noopener">Mutahar</a> appreciates this GIF...
+				<br>
+				(made with <code>ffmpeg</code>)
+			</figcaption>
+		</figure>
+		<!-- <p>It was produced with this shell script:</p>
+<pre tabindex="0"><code>yt-dlp --download-sections "*00:00:00-00:00:01" --output mutahar.webm "https://youtu.be/wJZbx3muGTA"
+ffmpeg -i mutahar.webm -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 404.gif</code></pre> -->
+	</div>
+{{end}}
