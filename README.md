@@ -56,8 +56,8 @@ root/
 
 ### 3. License
 
-- **Source code:** [MIT License](LICENSE.md)
-- **Content:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (unless stated otherwise)
+- **Source code:** [`MIT License`](LICENSE.md)
+- **Content:** [`CC BY 4.0`](https://creativecommons.org/licenses/by/4.0/) (unless stated otherwise)
 
 ---
 
@@ -187,7 +187,7 @@ root/
   git remote -v
   ```
 
-- Add GitHub Actions workflow by creating the directory `.github/workflows/` and copying the workflow file [`hugo.yml`](./.github/workflows/hugo.yml) into it.
+- Add GitHub Actions workflow by creating the directory `.github/workflows/` and copying the workflow file [`hugo.yml`](.github/workflows/hugo.yml) into it.
 
   ```bash
   mkdir -p .github/workflows
@@ -225,7 +225,7 @@ root/
   baseURL = "https://<username>.github.io/"
   ```
 
-- Modify `params.toml`
+- Modify `params.toml`.
 
   From:
 
@@ -315,11 +315,28 @@ root/
   params.author.image = "img/author.jpg"
   ```
 
-### 2. Useful Links
+### 2. Add Directories and Files
+
+- Create the directory `assets/img/` and add files `author.jpg`, `logo.jpg` `dark-logo.jpg` into it.
+
+  ```bash
+  mkdir -p assets/img
+  ```
+
+- Create the directory `layouts/_partials/` and add the file [`list.html`](layouts/_partials/list.html) into it.
+
+- Create the directory `static/files/` and add files into it.
+
+  ```bash
+  mkdir -p static/files
+  ```
+
+### 3. Useful Links
 
 - [https://favicon.io/favicon-converter/](https://favicon.io/favicon-converter/)
 
 - [https://wallpapercave.com/1600x1200-wallpapers](https://wallpapercave.com/1600x1200-wallpapers)
+
 
 <!-- 
 Add
