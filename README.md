@@ -309,7 +309,7 @@ root/
   To:
 
   ```bash
-  title = "Home"
+  # title = "Home"
   copyright = "Copyright © 2025, Fangfei Li. All rights reserved."
   params.author.name = "Fangfei Li"
   params.author.image = "img/author.jpg"
