@@ -8,8 +8,7 @@ tags: []
 
 ## Lecture Videos
 
-- [YouTube Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8)
-- **Lecture Topics:**  
+- **Lecture Topics ([YouTube Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8)):**  
   [Lecture 1 - Introduction](https://www.youtube.com/watch?v=XZ0PMRWXBEU&list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8&index=1)  
   [Lecture 2 - Background](https://www.youtube.com/watch?v=rNEujZmD2Tg&list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8&index=2)  
   [Lecture 3 - Autoregressive Models](https://www.youtube.com/watch?v=tRArbBf-AbI&list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8&index=3)  
@@ -47,8 +46,7 @@ tags: []
 
 ## My Notes
 
-- [View PDF](/files/my_notes_XCS236.pdf)
-- **Covered Topics:**  
+- **Covered Topics ([View PDF](/files/my_notes_XCS236.pdf)):**  
   1 - Introduction & Background  
   2 - Autoregressive Models (AR)  
   3 - Maximum Likelihood Learning (MLE)  
