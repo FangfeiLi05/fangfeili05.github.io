@@ -26,7 +26,7 @@ Best for general Python, web development, and small projects. Lightweight, fast,
   - Ensure Homebrew is available in new terminal sessions
   - Apply Homebrew settings immediately without restarting the terminal
 
-  Verify installation
+  (Optional) Verify installation
 
   ```bash
   brew --version
@@ -42,7 +42,7 @@ Best for general Python, web development, and small projects. Lightweight, fast,
   - Installed as: `/opt/homebrew/bin/python3`
   - Remove outdated files (does NOT uninstall Python)
 
-  Verify installation
+  (Optional) Verify installation
 
   ```bash
   python3 --version
@@ -185,4 +185,10 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
 
   ```bash
   jupyter kernelspec remove <kernel-name>  
+  ```
+
+- Search from the current directory downward and delete all `.DS_Store` files (with confirmation):
+
+  ```bash
+  find . -name '.DS_Store' -type f -exec rm -i {} \;
   ```

@@ -21,33 +21,37 @@ The site is built with [**Hugo**](https://github.com/gohugoio/hugo) using the [*
 
 ```bash
 root/
-├── config/                     # Site configuration
+├── config/                     # Site-wide configuration
 │   └── _default/
-│       ├── hugo.toml           # Main Hugo configuration
-│       ├── params.toml         # Theme parameters
-│       ├── menus.en.toml       # Navigation menus (English)
-│       ├── languages.en.toml   # Language settings (English)
-│       ├── module.toml         # Hugo modules configuration
-│       └── markup.toml         # Markdown/rendering settings
+│       ├── hugo.toml           # Core Hugo settings
+│       ├── params.toml         # Theme-specific parameters
+│       ├── menus.en.toml       # English navigation menus
+│       ├── languages.en.toml   # English language configuration
+│       ├── module.toml         # Hugo module definitions
+│       └── markup.toml         # Markdown and rendering options
 │
-├── content/                    # Website content
-│   ├── resume/                 # /resume/
-│   ├── papers/                 # /papers/
-│   ├── certifications/         # /certifications/
-│   └── notes/                  # /notes/
+├── content/                    # Site content
+│   ├── resume/                 # /resume/ section
+│   ├── papers/                 # /papers/ section
+│   ├── certifications/         # /certifications/ section
+│   └── notes/                  # /notes/ section
 │
-├── layouts/                    # Custom templates / overrides
-│   ├── _partials/              # Partial templates
+├── layouts/                    # Custom templates and overrides
+│   ├── _partials/              # Reusable partial templates
 │   └── list.html               # Custom list page template
 │
-├── assets/                     # Hugo Pipes assets (processed)
-│   └── img/
-│       ├── author.jpg
-│       ├── logo.jpg
-│       └── dark-logo.jpg
+├── assets/                     # Assets processed by Hugo Pipes
+│   ├── img/
+│   │   ├── author.jpg
+│   │   ├── logo.jpg
+│   │   └── dark-logo.jpg
+│   └── css/
+│       ├── schemes/
+│       │   └── fruit.css
+│       └── custom.css
 │
-└── static/                     # Static files (served at site root)
-    ├── files/                  # Downloadable files
+└── static/                     # Static files served from the site root
+    ├── files/                  # Downloadable resources
     ├── FiraCode-Regular.ttf    # Fira Code font
     ├── favicon.ico
     ├── favicon-32x32.png
@@ -106,7 +110,7 @@ root/
 
 ### 3. Create the GitHub Repository (Remote)
 
-- Create a new **empty** GitHub repository named `<site-name>`
+- Create an **empty** GitHub repository named `<site-name>`
 
 ### 4. Connect and Push to GitHub
 
@@ -139,7 +143,7 @@ root/
   EOF
   ```
 
-- Start the development server (the theme will be downloaded automatically).
+- Start the development server (the theme will be downloaded automatically):
 
   ```bash
   hugo server
@@ -182,7 +186,7 @@ root/
 
 ### 8. Deploy to GitHub Pages
 
-- Rename the repository from `<site-name>` to `<username>.github.io`
+- Rename the repository from `<site-name>` to `<username>.github.io`.
 
 - Update the Git remote:
 
@@ -255,11 +259,3 @@ root/
 - [Favicon Converter Tool](https://favicon.io/favicon-converter/)
 
 - [Wallpapers](https://wallpapercave.com/1600x1200-wallpapers)
-
-<!--
-- Optional Cleanup (.DS_Store files on macOS)
-```
-find . -name '.DS_Store' -type f
-find . -name '.DS_Store' -type f -delete
-```
--->
