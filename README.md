@@ -21,37 +21,41 @@ The site is built with [**Hugo**](https://github.com/gohugoio/hugo) using the [*
 
 ```bash
 root/
-│
 ├── config/                     # Site configuration
 │   └── _default/
-│       ├── hugo.toml
-│       ├── params.toml
-│       ├── menus.en.toml
-│       ├── languages.en.toml
-│       ├── module.toml
-│       └── markup.toml
+│       ├── hugo.toml           # Main Hugo configuration
+│       ├── params.toml         # Theme parameters
+│       ├── menus.en.toml       # Navigation menus (English)
+│       ├── languages.en.toml   # Language settings (English)
+│       ├── module.toml         # Hugo modules configuration
+│       └── markup.toml         # Markdown/rendering settings
 │
 ├── content/                    # Website content
-│   ├── resume/                 → https://fangfeili05.github.io/resume/
-│   ├── papers/                 → https://fangfeili05.github.io/papers/
-│   ├── certifications/         → https://fangfeili05.github.io/certifications/
-│   └── notes/                  → https://fangfeili05.github.io/notes/
+│   ├── resume/                 # /resume/
+│   ├── papers/                 # /papers/
+│   ├── certifications/         # /certifications/
+│   └── notes/                  # /notes/
 │
 ├── layouts/                    # Custom templates / overrides
-│   ├── _partials/
-│   └── list.html
+│   ├── _partials/              # Partial templates
+│   └── list.html               # Custom list page template
 │
-├── assets/                     # Hugo Pipes (images, CSS, JS)
+├── assets/                     # Hugo Pipes assets (processed)
 │   └── img/
 │       ├── author.jpg
 │       ├── logo.jpg
 │       └── dark-logo.jpg
 │
-├── static/                     # Static files (served as site root)
-│   ├── files/
-│   └── favicon.ico
-│
-└── themes/                     # External themes (optional)
+└── static/                     # Static files (served at site root)
+    ├── files/                  # Downloadable files
+    ├── FiraCode-Regular.ttf    # Fira Code font
+    ├── favicon.ico
+    ├── favicon-32x32.png
+    ├── favicon-16x16.png
+    ├── apple-touch-icon.png
+    ├── android-chrome-512x512.png
+    ├── android-chrome-192x192.png
+    └── site.webmanifest
 ```
 
 ### 3. License
@@ -212,128 +216,37 @@ root/
 ### 1. Modify Config Files
 
 - Modify `hugo.toml`.
-  
-  From:
 
-  ```bash
-  # baseURL = "https://your_domain.com/"
-  ```
-
-  To:
-
-  ```bash
-  baseURL = "https://<username>.github.io/"
-  ```
+  | From | To |
+  |------|----|
+  | `# baseURL = "https://your_domain.com/"` | `baseURL = "https://<username>.github.io/"` |
 
 - Modify `params.toml`.
 
-  From:
-
-  ```bash
-  colorScheme = "congo"
-  enableSearch = false
-  enableCodeCopy = false
-  # header.logo = "img/logo.jpg"
-  # header.logoDark = "img/dark-logo.jpg"
-  footer.showAppearanceSwitcher = false
-  homepage.layout = "page"
-  ```
-
-  To:
-
-  ```bash
-  colorScheme = "fruit"
-  enableSearch = true
-  enableCodeCopy = true
-  header.logo = "img/logo.jpg"
-  header.logoDark = "img/dark-logo.jpg"
-  footer.showAppearanceSwitcher = true
-  homepage.layout = "profile"
-  ```
+  | From | To |
+  |------|----| 
+  | `colorScheme = "congo"` | `colorScheme = "fruit"` |
+  | `enableSearch = false` | `enableSearch = true` |
+  | `enableCodeCopy = false` | `enableCodeCopy = true` |
+  | `[header]`<br>`#`&emsp;`logo = "img/logo.jpg"`<br>`#`&emsp;`logoDark = "img/dark-logo.jpg"`| `[header]`<br>&emsp;`logo = "img/logo.jpg"`<br>&emsp;`logoDark = "img/dark-logo.jpg"`|
+  | `[footer]`<br>&emsp;`showAppearanceSwitcher = false` | `[footer]`<br>&emsp;`showAppearanceSwitcher = true` |
+  | `[homepage]`<br>&emsp;`layout = "page"` | `[homepage]`<br>&emsp;`layout = "profile"` |
 
 - Modify `menus.en.toml`.
 
-  From:
-
-  ```bash
-  [[main]]
-    name = "Blog"
-    pageRef = "posts"
-    weight = 10
-
-  [[main]]
-    name = "Categories"
-    pageRef = "categories"
-    weight = 20
-
-  [[main]]
-    name = "Tags"
-    pageRef = "tags"
-    weight = 30
-  ```
-  
-  To:
-
-  ```bash
-  [[main]]
-    name = "Resume"
-    pageRef = "resume"
-    #url = "/files/resume_FL_20251201.pdf"
-    weight = 10
-
-  [[main]]
-    name = "Papers"
-    pageRef = "papers"
-    weight = 20
-
-  [[main]]
-    name = "Certifications"
-    pageRef = "certifications"
-    weight = 30
-
-  [[main]]
-    name = "Notes"
-    pageRef = "notes"
-    weight = 40
-  ```
+  | From | To |
+  |------|----| 
+  | `[[main]]`<br>&emsp;`name = "Blog"`<br>&emsp;`pageRef = "posts"`<br>&emsp;`weight = 10`<br>`[[main]]`<br>&emsp;`name = "Categories"`<br>&emsp;`pageRef = "categories"`<br>&emsp;`weight = 20`<br>`[[main]]`<br>&emsp;`name = "Tags"`<br>&emsp;`pageRef = "tags"`<br>&emsp;`weight = 30` | `[[main]]`<br>&emsp;`name = "Resume"`<br>&emsp;`pageRef = "resume"`<br>&emsp;`weight = 10`<br>`[[main]]`<br>&emsp;`name = "Papers"`<br>&emsp;`pageRef = "papers"`<br>&emsp;`weight = 20`<br>`[[main]]`<br>&emsp;`name = "Certifications"`<br>&emsp;`pageRef = "certifications"`<br>&emsp;`weight = 30`<br>`[[main]]`<br>&emsp;`name = "Notes"`<br>&emsp;`pageRef = "notes"`<br>&emsp;`weight = 40` |
 
 - Modify `languages.en.toml`.
 
-  From:
+  | From | To |
+  |------|----| 
+  | `title = "Congo"` | `# title = "Home"` |
+  | `# copyright = "Copy, _right?_ :thinking_face:"` | `copyright = "Copyright © 2025, Fangfei Li. All rights reserved."` |
+  | `[params.author]`<br>`#`&emsp;`name = "Your name here"`<br>`#`&emsp;`image = "img/author.jpg"` | `[params.author]`<br>&emsp;`name = "Fangfei Li"`<br>&emsp;`image = "img/author.jpg"`|
 
-  ```bash
-  title = "Congo"
-  # copyright = "Copy, _right?_ :thinking_face:"
-  # params.author.name = "Your name here"
-  # params.author.image = "img/author.jpg"
-  ```
-
-  To:
-
-  ```bash
-  # title = "Home"
-  copyright = "Copyright © 2025, Fangfei Li. All rights reserved."
-  params.author.name = "Fangfei Li"
-  params.author.image = "img/author.jpg"
-  ```
-
-### 2. Add Directories and Files
-
-- Create the directory `assets/img/` and add files `author.jpg`, `logo.jpg` `dark-logo.jpg` into it.
-
-  ```bash
-  mkdir -p assets/img
-  ```
-
-- Create the directory `layouts/_partials/` and add the file [`list.html`](layouts/_partials/list.html) into it.
-
-- Create the directory `static/files/` and add files into it.
-
-  ```bash
-  mkdir -p static/files
-  ```
-
-### 3. Useful Links
+### 2. Useful Links
 
 - [Congo Documentation](https://jpanther.github.io/congo/docs/)
 
@@ -343,13 +256,7 @@ root/
 
 - [Wallpapers](https://wallpapercave.com/1600x1200-wallpapers)
 
-<!-- 
-Add
-- assets:
-img -> author.jpg
-
-layouts/list.html
-
+<!--
 - Optional Cleanup (.DS_Store files on macOS)
 ```
 find . -name '.DS_Store' -type f
