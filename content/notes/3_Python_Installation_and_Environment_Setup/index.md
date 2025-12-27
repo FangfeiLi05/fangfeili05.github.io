@@ -6,7 +6,7 @@ summary: "Python"
 tags: [""]
 ---
 
-## Method 1 -- VS Code + Homebrew + `uv`
+## 1. Method 1 -- VS Code + Homebrew + `uv`
 
 Best for general Python, web development, and small projects. Lightweight, fast, and modern.
 
@@ -78,7 +78,7 @@ Best for general Python, web development, and small projects. Lightweight, fast,
 
 ---
 
-## Method 2 -- Conda
+## 2. Method 2 -- Conda
 
 Best for data science, machine learning, and scientific computing. Heavier, but handles complex libraries well.
 
@@ -131,7 +131,7 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
 
 ---
 
-## Extra Useful Commands
+## 3. Extra Useful Commands
 
 - List all Python / Python3 executables in `PATH`:
 
