@@ -94,7 +94,7 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
   conda env create -f environment.yaml
   ```
 
-  Example of `environment.yaml`: [here](/files/environment.yaml)
+  Example `environment.yaml`: [View example](/files/environment.yaml)
 
 - **Step 2.** Create a Python Jupyter environment for running JupyterLab:
 
@@ -154,8 +154,7 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
 - Remove a Conda environment:
 
   ```bash
-  conda env remove -n <env-name>
-  conda clean --all               # Free up disk space by removing unused packages and caches
+  conda env remove -n <env-name>           
   ```
 
 - Free up disk space by removing unused packages and caches:
@@ -164,7 +163,13 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
   conda clean --all
   ```
 
-- Run Python scripts using `uv`:
+- Free up disk space by removing unused packages and caches:
+
+  ```bash
+  conda clean --all
+  ```
+
+- Run Python scripts (with `uv`):
 
   ```bash
   uv run python <script-name>.py
