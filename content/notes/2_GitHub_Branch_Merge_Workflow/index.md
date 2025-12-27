@@ -138,7 +138,7 @@ git push origin --delete dev
 | ----- | ----- | ----- |
 | **Case 1** | 1. Create `dev` from `main`<br>2. Changes only in `dev` (none in `main`)<br>3. Merge `dev` → `main` | **No conflicts** |
 | **Case 2** | 1. Create `dev` from `main`<br>2. Changes only in `main` (none in `dev`)<br>3. Merge `dev` → `main` | **No conflicts** |
-| **Case 3** | 1. Create `dev` from `main`<br>2. Changes in **both** `dev` and `main`<br>3. Merge `dev` → `main` | Conflicts occur **only if** both branches<br>modify **the same or overlapping lines**.<br>Otherwise, **no conflict**. |
+| **Case 3** | 1. Create `dev` from `main`<br>2. Changes in both `dev` and `main`<br>3. Merge `dev` → `main` | Conflicts occur **only if** both branches<br>modify **the same or overlapping lines**.<br>Otherwise, **no conflict**. |
 
 ---
 
