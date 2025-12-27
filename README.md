@@ -12,7 +12,7 @@ The site is built with [**Hugo**](https://github.com/gohugoio/hugo) using the [*
 ### 1. Tech Stack
 
 - **Hugo** (extended) - static site generator
-- **Congo** - theme (For details, [**Congo documentation**](https://jpanther.github.io/congo/docs/))
+- **Congo** - theme
 - **TailwindCSS** - custom styling
 - **Markdown** - content
 - **GitHub Pages + GitHub Actions** - deployment
@@ -116,7 +116,7 @@ root/
   git push -u origin main
   ```
 
-### 5. Install the Congo Theme
+### 5. Install the Congo Theme (Hugo Module)
 
 - Initialize the Hugo module:
 
@@ -232,6 +232,7 @@ root/
   ```bash
   colorScheme = "congo"
   enableSearch = false
+  enableCodeCopy = false
   # header.logo = "img/logo.jpg"
   # header.logoDark = "img/dark-logo.jpg"
   footer.showAppearanceSwitcher = false
@@ -241,8 +242,9 @@ root/
   To:
 
   ```bash
-  colorScheme = "fire"
+  colorScheme = "fruit"
   enableSearch = true
+  enableCodeCopy = true
   header.logo = "img/logo.jpg"
   header.logoDark = "img/dark-logo.jpg"
   footer.showAppearanceSwitcher = true
@@ -333,11 +335,14 @@ root/
 
 ### 3. Useful Links
 
-- [https://favicon.io/favicon-converter/](https://favicon.io/favicon-converter/)
+- [Congo Documentation](https://jpanther.github.io/congo/docs/)
 
-- [https://wallpapercave.com/1600x1200-wallpapers](https://wallpapercave.com/1600x1200-wallpapers)
+- [Hugo & Congo Configuration](https://applegamer22.github.io/posts/hugo/)
 
-- [https://applegamer22.github.io/posts/hugo/](https://applegamer22.github.io/posts/hugo/)
+- [Favicon Converter Tool](https://favicon.io/favicon-converter/)
+
+- [Wallpapers](https://wallpapercave.com/1600x1200-wallpapers)
+
 <!-- 
 Add
 - assets:
