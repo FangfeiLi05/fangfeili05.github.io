@@ -2,7 +2,7 @@
 title: "Hugo Congo Static Site Build Workflow"
 date: 2025-12-28
 description: "Add description"
-summary: "Hugo Congo"
+summary: "Hugo & Congo"
 tags: [""]
 ---
 
@@ -235,9 +235,6 @@ tags: [""]
 
 ## Useful Links
 
-- [Congo Documentation](https://jpanther.github.io/congo/docs/)
-- [Hugo & Congo Configuration](https://applegamer22.github.io/posts/hugo/)
-- GitHub Repositories:
-  - [Minimalist Hugo Template for Academic Websites](https://github.com/pmichaillat/hugo-website)
-  - [Congo Theme](https://github.com/jpanther/congo)
-  - [Personal Site Example (applegamer22.github.io)](https://github.com/AppleGamer22/applegamer22.github.io)
+- [Congo Documentation](https://jpanther.github.io/congo/docs/) ([GitHub Repository: Congo Theme](https://github.com/jpanther/congo))
+- [Hugo & Congo Configuration](https://applegamer22.github.io/posts/hugo/) ([GitHub Repository: Personal Site Example (applegamer22.github.io)](https://github.com/AppleGamer22/applegamer22.github.io))  
+- [GitHub Repository: Minimalist Hugo Template for Academic Websites](https://github.com/pmichaillat/hugo-website)
