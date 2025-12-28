@@ -51,4 +51,4 @@ root/
 
 ## Setup Guide
 
-- For a detailed walkthrough on building and deploying this site with Hugo and the Congo theme, see: (This link)[https://fangfeili05.github.io/notes/4_hugo_congo_static_site_build_workflow/]
+- For a detailed walkthrough on building and deploying this site with Hugo and the Congo theme, see: [This link](https://fangfeili05.github.io/notes/4_hugo_congo_static_site_build_workflow/)
