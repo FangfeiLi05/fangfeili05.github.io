@@ -1,5 +1,10 @@
+# Generated files by hugo
 public/
-resources/
-_backup/
+/resources/_gen/
+
+# Temporary lock file while building
 .hugo_build.lock
-.DS_Store
+
+# Other
+_backup/
+**/.DS_Store

@@ -1,6 +1,6 @@
 ---
 title: "Hugo Congo Static Site Build Workflow"
-date: 2025-12-27
+date: 2025-12-28
 description: "Add description"
 summary: "Hugo Congo"
 tags: [""]
@@ -94,7 +94,6 @@ tags: [""]
 
 - Copy Congo's default configuration files (excluding `module.toml`) from [this link](https://github.com/jpanther/congo/tree/dev/config/_default) into `config/_default/`.
 
-
 ### 6. Add `.gitignore` and Commit Changes
 
 - Create and populate the `.gitignore` file:
@@ -103,10 +102,16 @@ tags: [""]
   touch .gitignore
 
   cat <<'EOF' >> .gitignore
+  # Generated files by hugo
   public/
-  resources/
+  /resources/_gen/
+
+  # Temporary lock file while building
   .hugo_build.lock
-  .DS_Store
+
+  # Other
+  _backup/
+  **/.DS_Store
   EOF
   ```
 
@@ -147,14 +152,91 @@ tags: [""]
 
   Site URL: `https://<username>.github.io/`
 
-## Configuration Additions
+---
 
-- To add
+## Configuration and Contents Updates
+
+### 1. Update Configuration Files
+
+- Modify `hugo.toml`:
+
+  | Section | From | To |
+  |-----|-----|-----|
+  | -- | `# baseURL = "https://your_domain.com/"` | `baseURL = "https://<username>.github.io/"` |
+
+- Modify `params.toml`:
+
+  | Section | From | To |
+  |-----|-----|-----|
+  | -- | `colorScheme = "congo"`<br>`enableSearch = false`<br>`enableCodeCopy = false` | `colorScheme = "fruit"`<br>`enableSearch = true`<br>`enableCodeCopy = true` |
+  | `header` | `# logo = "img/logo.jpg"`<br>`# logoDark = "img/dark-logo.jpg"` | `logo = "img/logo.jpg"`<br>`logoDark = "img/dark-logo.jpg"` |
+  | `footer` | `showAppearanceSwitcher = false` | `showAppearanceSwitcher = true` |
+  | `homepage` | `layout = "page"` | `layout = "profile"` |
+
+- Modify `languages.en.toml`:
+
+  | Section | From | To |
+  |-----|-----|-----|
+  | -- | `title = "Congo"`<br>`# copyright = "Copy, _right?_ :thinking_face:"` | `# title = "Home"`<br>`copyright = "Copyright © 2025, Fangfei Li. All rights reserved."` |
+  | `params.author` | `# name = "Your name here"`<br>`# image = "img/author.jpg"` | `name = "Fangfei Li"`<br>`image = "img/author.jpg"`|
+
+- Modify `menus.en.toml`:
+  [View example](https://github.com/FangfeiLi05/fangfeili05.github.io/blob/main/config/_default/menus.en.toml):
+
+### 2. Add Assets
+
+- Add the `assets/` directory to store images, stylesheets, and a custom color scheme ([View example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/assets)):
+
+  ```bash
+  assets/
+  ├── img/
+  │   ├── author.jpg
+  │   ├── logo.jpg
+  │   └── dark-logo.jpg
+  └── css/
+      ├── schemes/
+      │   └── fruit.css           # Custom color scheme
+      └── custom.css
+  ```
+
+  The contents of the directory `css/` are sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/tree/master/assets/css)
+
+### 3. Add Layouts
+
+- Add the `layouts/` directory for custom templates and overrides ([View example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/layouts)):
+
+  ```bash
+  layouts/
+  ├── _partials/                  # Reusable partial templates
+  └── list.html                   # Custom list page template
+  ```
+
+  The contents of the directory `_partials/` are sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/tree/master/layouts/partials)
+
+### 4. Add Static Files
+
+- Add the `static/` directory for fonts, icons, and downloadable resources ([View example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/static)):
+
+  ```bash
+  static/
+  ├── files/                      # Downloadable resources
+  ├── FiraCode-Regular.ttf        # Fira Code font
+  ├── favicon.ico
+  ├── favicon-32x32.png
+  ├── favicon-16x16.png
+  ├── apple-touch-icon.png
+  ├── android-chrome-512x512.png
+  ├── android-chrome-192x192.png
+  └── site.webmanifest
+  ```
+
+---
 
 ## Useful Links
 
 - [Congo Documentation](https://jpanther.github.io/congo/docs/)
 - [Hugo & Congo Configuration](https://applegamer22.github.io/posts/hugo/)
-- [GitHub: Minimalist Hugo Template for Academic Websites](https://github.com/pmichaillat/hugo-website)
-- [GitHub: Congo](https://github.com/jpanther/congo)
-- [GitHub: applegamer22.github.io](https://github.com/AppleGamer22/applegamer22.github.io)
+- GitHub Repositories:
+  - [Minimalist Hugo Template for Academic Websites](https://github.com/pmichaillat/hugo-website)
+  - [Congo Theme](https://github.com/jpanther/congo)
+  - [Example Personal Website (applegamer22.github.io)](https://github.com/AppleGamer22/applegamer22.github.io)
