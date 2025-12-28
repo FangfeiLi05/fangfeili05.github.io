@@ -6,11 +6,11 @@ summary: "Python"
 tags: [""]
 ---
 
-## 1. Method 1 -- VS Code + Homebrew + `uv`
+## Method 1 -- VS Code + Homebrew + `uv`
 
 Best for general Python, web development, and small projects. Lightweight, fast, and modern.
 
-### 1.1. Installation
+### 1. Installation
 
 - [**VS Code**](https://code.visualstudio.com/docs/introvideos/basics): [Download & Install](https://code.visualstudio.com/download)
 
@@ -19,8 +19,8 @@ Best for general Python, web development, and small projects. Lightweight, fast,
   Then add Homebrew to your PATH:
 
   ```bash
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<user-name>/.zprofile  
-  eval "$(/opt/homebrew/bin/brew shellenv)"                                         
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<user-name>/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
   ```
 
   - Ensure Homebrew is available in new terminal sessions
@@ -54,7 +54,7 @@ Best for general Python, web development, and small projects. Lightweight, fast,
   curl -LsSf https://astral.sh/uv/install.sh | sh
   ```
 
-### 1.2. Environment Setup
+### 2. Environment Setup
 
 - **Step 1.** Create a Python Project Environment:
 
@@ -78,15 +78,15 @@ Best for general Python, web development, and small projects. Lightweight, fast,
 
 ---
 
-## 2. Method 2 -- Conda
+## Method 2 -- Conda
 
 Best for data science, machine learning, and scientific computing. Heavier, but handles complex libraries well.
 
-### 2.1. Installation
+### 1. Installation
 
 - **Miniconda**: [Download & Install](https://www.anaconda.com/docs/getting-started/miniconda/main)
 
-### 2.2. Environment Setup
+### 2. Environment Setup
 
 - **Step 1.** Create a Python project environment and install dependencies:
   
@@ -100,14 +100,6 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
 
   ```bash
   conda create -n jupyter_env python=3.14 jupyterlab -c conda-forge
-  ```
-
-  For usage:
-
-  ```bash
-  conda activate jupyter_env
-  jupyter lab
-  conda deactivate
   ```
 
 - **Step 3a (recommended; choose either 3a or 3b).** Enable automatic Jupyter kernel discovery:
@@ -131,7 +123,7 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
 
 ---
 
-## 3. Extra Useful Commands
+## Extra Useful Commands
 
 - List all Python / Python3 executables in `PATH`:
 
@@ -145,6 +137,36 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
   which python python3
   ```
 
+- Run Python scripts (with `uv`):
+
+  ```bash
+  uv run python <script-name>.py
+  ```
+
+- Open JupyterLab:
+
+  ```bash
+  conda activate jupyter_env
+  jupyter lab
+  conda deactivate
+  ```
+
+- List all available Jupyter kernels:
+
+  ```bash
+  conda activate jupyter_env
+  jupyter kernelspec list
+  conda deactivate
+  ```
+
+- Remove a specific Jupyter kernel:
+
+  ```bash
+  conda activate jupyter_env
+  jupyter kernelspec remove <kernel-name>
+  conda deactivate
+  ```
+
 - List all Conda environments:
 
   ```bash
@@ -154,37 +176,8 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
 - Remove a Conda environment:
 
   ```bash
-  conda env remove -n <env-name>           
-  ```
-
-- Free up disk space by removing unused packages and caches:
-
-  ```bash
+  conda env remove -n <env-name>
   conda clean --all
-  ```
-
-- Free up disk space by removing unused packages and caches:
-
-  ```bash
-  conda clean --all
-  ```
-
-- Run Python scripts (with `uv`):
-
-  ```bash
-  uv run python <script-name>.py
-  ```
-
-- List all available Jupyter kernels (in `jupyter_env`):
-
-  ```bash
-  jupyter kernelspec list                
-  ```
-
-- Remove a specific Jupyter kernel (in `jupyter_env`):
-
-  ```bash
-  jupyter kernelspec remove <kernel-name>  
   ```
 
 - Search from the current directory downward and delete all `.DS_Store` files (with confirmation):
