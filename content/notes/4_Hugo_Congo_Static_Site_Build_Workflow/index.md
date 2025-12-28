@@ -129,7 +129,7 @@ tags: [""]
   git remote -v
   ```
 
-- Add a GitHub Actions workflow by creating the directory `.github/workflows/` and copying the workflow file from [this link](.github/workflows/hugo.yml) into `.github/workflows/`.
+- Add a GitHub Actions workflow by creating the directory `.github/workflows/` and copying the workflow file of [this link](https://github.com/pmichaillat/hugo-website/blob/main/.github/workflows/hugo.yml) into `.github/workflows/`.
 
   ```bash
   mkdir -p .github/workflows
@@ -147,7 +147,6 @@ tags: [""]
 
   Site URL: `https://<username>.github.io/`
 
-
 ## Configuration Additions
 
 - To add
@@ -155,5 +154,7 @@ tags: [""]
 ## Useful Links
 
 - [Congo Documentation](https://jpanther.github.io/congo/docs/)
-
 - [Hugo & Congo Configuration](https://applegamer22.github.io/posts/hugo/)
+- [GitHub: Minimalist Hugo Template for Academic Websites](https://github.com/pmichaillat/hugo-website)
+- [GitHub: Congo](https://github.com/jpanther/congo)
+- [GitHub: applegamer22.github.io](https://github.com/AppleGamer22/applegamer22.github.io)
