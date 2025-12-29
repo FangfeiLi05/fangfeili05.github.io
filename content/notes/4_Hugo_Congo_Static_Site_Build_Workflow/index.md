@@ -184,7 +184,7 @@ tags: [""]
 
 ### 2. Add Assets
 
-- Add the `assets/` directory to store images, stylesheets, and a custom color scheme ([View example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/assets)):
+- Add the `assets/` directory to store images, stylesheets, and a custom color scheme ([View Example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/assets)):
 
   ```text
   assets/
@@ -202,7 +202,7 @@ tags: [""]
 
 ### 3. Add Layouts
 
-- Add the `layouts/` directory for custom templates and overrides ([View example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/layouts)):
+- Add the `layouts/` directory for custom templates and overrides ([View Example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/layouts)):
 
   ```text
   layouts/
@@ -210,11 +210,11 @@ tags: [""]
   └── list.html                   # Custom list page template
   ```
 
-  The contents of the directory `_partials/` (excluding `logo.html`) are sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/tree/master/layouts/partials).
+  The contents of the directory `_partials/` are sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/tree/master/layouts/partials). Remove `logo.html` to enable the logo.
 
 ### 4. Add Static Files
 
-- Add the `static/` directory for fonts, icons, and downloadable resources ([View example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/static)):
+- Add the `static/` directory for fonts, icons, and downloadable resources ([View Example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/static)):
 
   ```text
   static/

@@ -94,7 +94,7 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
   conda env create -f environment.yaml
   ```
 
-  Example `environment.yaml`: [View example](/files/environment.yaml)
+  Example `environment.yaml`: [View Example](/files/environment.yaml)
 
 - **Step 2.** Create a Python Jupyter environment for running JupyterLab:
 

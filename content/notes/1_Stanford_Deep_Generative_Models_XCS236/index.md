@@ -37,7 +37,7 @@ tags: []
 - **Videos:**
   - PyTorch Tutorial (originally for XCS224N) ([YouTube](https://www.youtube.com/watch?v=Uv0AIRr3ptg) | [CoLab](https://colab.research.google.com/drive/1XJhrdkcE6rlC3WwtH7Py1bYl8CEVuBSU?usp=sharing))
   - Variational Autoencoders | Generative AI Animated ([YouTube](https://www.youtube.com/watch?v=qJeaCHQ1k2w))
-- **Books:**  
+- **Books:**
   - Deep Learning - Ian Goodfellow, Yoshua Bengio, and Aaron Courville ([PDF Download](https://www.deeplearningbook.org/))
   - Probabilistic Machine Learning: Advanced Topics - Kevin Patrick Murphy, p771--924 (IV Generation; Chapter 21 -- 26)
 ([Info](https://probml.github.io/pml-book/book2.html) | [PDF Download](https://github.com/probml/pml2-book))
@@ -46,16 +46,16 @@ tags: []
 
 ## My Notes
 
-- **Covered Topics ([View PDF](/files/my_notes_XCS236.pdf)):**  
-  1 - Introduction & Background  
-  2 - Autoregressive Models (AR)  
-  3 - Maximum Likelihood Learning (MLE)  
-  4 - Latent Variable Models (VAEs)  
-  5 - Normalizing Flows  
-  6 - Generative Adversarial Networks (GANs)  
-  7 - Energy Based Models (EBMs) (N/A)  
-  8 - Score Based Models (N/A)  
-  9 - Score Based Diffusion Models (N/A)  
-  10 - Discrete Latent Variable Models (N/A)  
-  11 - Diffusion Models for Discrete Data (N/A)  
+- **Covered Topics ([View PDF](/files/my_notes_XCS236.pdf)):**
+  1 - Introduction & Background
+  2 - Autoregressive Models (AR)
+  3 - Maximum Likelihood Learning (MLE)
+  4 - Latent Variable Models (VAEs)
+  5 - Normalizing Flows
+  6 - Generative Adversarial Networks (GANs)
+  7 - Energy Based Models (EBMs) (N/A)
+  8 - Score Based Models (N/A)
+  9 - Score Based Diffusion Models (N/A)
+  10 - Discrete Latent Variable Models (N/A)
+  11 - Diffusion Models for Discrete Data (N/A)
   12 - Evaluation of Generative Models (N/A)
