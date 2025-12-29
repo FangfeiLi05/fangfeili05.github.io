@@ -1,0 +1,103 @@
+<!-- based on https://github.com/jpanther/congo/discussions/23#discussioncomment-1550774 -->
+<!-- based on https://github.com/jpanther/congo/blob/stable/layouts/partials/vendor.html -->
+<!-- based on https://github.com/google/docsy/blob/main/assets/js/mermaid.js#L5-L8 -->
+{{if $.Params.math}}
+	{{$katexCSS := resources.Get "lib/katex/katex.min.css"}}
+	{{$katexCSS := $katexCSS | resources.Fingerprint "sha512"}}
+	<link type="text/css" rel="stylesheet" href="{{$katexCSS.RelPermalink}}" integrity="{{$katexCSS.Data.Integrity}}">
+	{{$katexJS := resources.Get "lib/katex/katex.min.js"}}
+	{{$katexJS := $katexJS | resources.Fingerprint "sha512"}}
+	<script defer src="{{$katexJS.RelPermalink}}" integrity="{{$katexJS.Data.Integrity}}"></script>
+	{{$katexRenderJS := resources.Get "lib/katex/auto-render.min.js"}}
+	{{$katexRenderJS := $katexRenderJS | resources.Fingerprint "sha512"}}
+	<script defer src="{{$katexRenderJS.RelPermalink}}" integrity="{{$katexRenderJS.Data.Integrity}}"></script>
+	{{$katexFonts := resources.Match "lib/katex/fonts/*"}}
+	{{range $katexFonts}}
+		<!-- {{.RelPermalink}} -->
+	{{end}}
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			for (const p of document.querySelectorAll("p")) {
+				if (/\$\$.*\$\$/g.test(p.innerText) && p.hasChildNodes()) {
+					for (const child of p.children) {
+						if (child.tagName === "EM") {
+							const textNode = document.createTextNode(`_${child.innerText}_`);
+							p.replaceChild(textNode, child);
+						}
+					}
+				}
+			}
+			renderMathInElement(document.body, {
+				delimiters: [
+					{
+						left: "$$",
+						right: "$$",
+						display: true
+					},
+					{
+						left: '$',
+						right: '$',
+						display: false
+					},
+				],
+				/** @type {string} math */
+				preProcess: math => math.replaceAll(" \\\n", " \\\\\n"),
+				throwOnError: false
+			});
+		});
+	</script>
+{{end}}
+
+{{if .Params.diagrams}}
+	{{$mermaidLib := resources.Get "lib/mermaid/mermaid.min.js"}}
+	{{$mermaidConfig := resources.Get "js/mermaid.js"}}
+	{{$mermaidConfig := $mermaidConfig | resources.Minify}}
+	{{$mermaidJS := slice $mermaidLib $mermaidConfig | resources.Concat "js/mermaid.bundle.js" | resources.Fingerprint "sha512"}}
+	<script defer type="text/javascript" src="{{$mermaidJS.RelPermalink}}" integrity="{{$mermaidJS.Data.Integrity}}"></script>
+
+	<script>
+		/**
+		 * @type {string} color an RGB tuple that represents a colour in CSS
+		 * @returns an RGB CSS function form of the variable
+		*/
+		function tuple2RGB(color) {
+			return `rgb(${getComputedStyle(document.documentElement).getPropertyValue(color)})`;
+		}
+
+		document.addEventListener("DOMContentLoaded", () => {
+			const diagrams = document.querySelectorAll("code.language-mermaid");
+			let hasDiagram = diagrams.length > 0;
+			if (!hasDiagram) return;
+			for (const diagram of diagrams) {
+				const text = diagram.textContent;
+				const pre = document.createElement("pre");
+				pre.classList.add("mermaid");
+				pre.textContent = text;
+				diagram.parentElement.replaceWith(pre);
+			}
+
+			for (const appearanceSwitcher of document.querySelectorAll("[id^='appearance-switcher']")) {
+				appearanceSwitcher.addEventListener("click", () => location.reload())
+			}
+			// window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => location.reload());
+			document.querySelector("button#appearance-switcher-0").addEventListener("click", () => location.reload());
+		});
+	</script>
+{{end}}
+
+<script defer>
+	// window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => localStorage.removeItem("appearance"));
+	if ("serviceWorker" in navigator) {
+		(async () => {
+			try {
+				const registrations = await navigator.serviceWorker.getRegistrations();
+				if (!registrations.map(registration => registration.active.scriptURL).includes(`${document.location.origin}/service_worker.js`)) {
+					await navigator.serviceWorker.register("/service_worker.js");
+				}
+			} catch (err) {
+				console.error(err);
+			}
+		})()
+	}
+</script>

@@ -180,9 +180,7 @@ tags: [""]
   | -- | `title = "Congo"`<br>`# copyright = "Copy, _right?_ :thinking_face:"` | `# title = "Home"`<br>`copyright = "Copyright © 2025, Fangfei Li. All rights reserved."` |
   | `params.author` | `# name = "Your name here"`<br>`# image = "img/author.jpg"` | `name = "Fangfei Li"`<br>`image = "img/author.jpg"`|
 
-- Modify `menus.en.toml`:
-  
-  [View example](https://github.com/FangfeiLi05/fangfeili05.github.io/blob/main/config/_default/menus.en.toml)
+- Modify `menus.en.toml`: [View example](https://github.com/FangfeiLi05/fangfeili05.github.io/blob/main/config/_default/menus.en.toml)
 
 ### 2. Add Assets
 
@@ -235,6 +233,8 @@ tags: [""]
 
 ## Useful Links
 
-- [Congo Documentation](https://jpanther.github.io/congo/docs/) ([GitHub Repository: Congo Theme](https://github.com/jpanther/congo))
-- [Hugo & Congo Configuration](https://applegamer22.github.io/posts/hugo/) ([GitHub Repository: Personal Site Example (applegamer22.github.io)](https://github.com/AppleGamer22/applegamer22.github.io))  
+- [Congo Documentation](https://jpanther.github.io/congo/docs/)
+- [GitHub Repository: Congo Theme](https://github.com/jpanther/congo)
+- [Hugo & Congo Configuration](https://applegamer22.github.io/posts/hugo/)
+- [GitHub Repository: Personal Site Example (applegamer22.github.io)](https://github.com/AppleGamer22/applegamer22.github.io)
 - [GitHub Repository: Minimalist Hugo Template for Academic Websites](https://github.com/pmichaillat/hugo-website)

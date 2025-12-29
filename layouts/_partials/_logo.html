@@ -1,0 +1,12 @@
+{{$homePageURL :=  relLangURL ""}}
+{{- $logo := resources.Get "icons/logo.svg"}}
+{{- if $logo}}
+	<a href="{{$homePageURL}}" class="logo mr-2 object-left px-1 transition-transform hover:scale-125">
+		{{- partial "icon.html" "logo" -}}
+	</a>
+{{- end}}
+{{- if .Site.Params.header.showTitle | default true}}
+	<a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" rel="me" href="{{$homePageURL}}">
+		{{.Site.Title | markdownify | emojify}}
+	</a>
+{{- end}}
