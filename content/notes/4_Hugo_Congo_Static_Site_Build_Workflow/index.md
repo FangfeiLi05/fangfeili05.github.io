@@ -229,6 +229,10 @@ tags: [""]
   └── site.webmanifest
   ```
 
+### 4. Add `tailwind.config.js`
+  
+  The file `tailwind.config.js` is sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/blob/master/tailwind.config.js).
+
 ---
 
 ## Useful Links
