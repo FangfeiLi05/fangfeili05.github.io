@@ -210,7 +210,7 @@ tags: [""]
   └── list.html                   # Custom list page template
   ```
 
-  The contents of the directory `_partials/` are sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/tree/master/layouts/partials).
+  The contents of the directory `_partials/` (excluding `logo.html`) are sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/tree/master/layouts/partials).
 
 ### 4. Add Static Files
 
