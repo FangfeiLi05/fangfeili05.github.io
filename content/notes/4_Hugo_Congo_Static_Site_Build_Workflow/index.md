@@ -177,7 +177,7 @@ tags: [""]
 
   | Section | From | To |
   |-----|-----|-----|
-  | -- | `title = "Congo"`<br>`# copyright = "Copy, _right?_ :thinking_face:"` | `# title = "Home"`<br>`copyright = "Copyright © 2025, Fangfei Li. All rights reserved."` |
+  | -- | `title = "Congo"`<br>`# copyright = "Copy, _right?_ :thinking_face:"` | `# title = "Home"`<br>`copyright = "Copyright © 2026. All rights reserved."` |
   | `params.author` | `# name = "Your name here"`<br>`# image = "img/author.jpg"` | `name = "Fangfei Li"`<br>`image = "img/author.jpg"`|
 
 - Modify `menus.en.toml`: [View example](https://github.com/FangfeiLi05/fangfeili05.github.io/blob/main/config/_default/menus.en.toml)
