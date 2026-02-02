@@ -56,14 +56,14 @@ git push origin --delete dev
 
 ## How to Merge Branch?
 
-- **Step 1. Create a new `dev` branch**
+- **Step 1 - Create a new `dev` branch**
 
   ```bash
   git switch -c dev       # Create and switch to the dev branch
   git push -u origin dev  # Push dev to remote and set upstream (first push only)
   ```
 
-- **Step 2. Make changes on the `dev` branch**
+- **Step 2 - Make changes on the `dev` branch**
 
   Edit your files normally, then stage and commit:
 
@@ -78,7 +78,7 @@ git push origin --delete dev
   git push  # Push to origin/dev (since upstream is set)
   ```
 
-- **Step 3. Merge dev into main**
+- **Step 3 - Merge dev into main**
 
   ```bash
   git switch main  # Switch to the main branch
@@ -86,7 +86,7 @@ git push origin --delete dev
   git merge dev    # Merge the dev branch into main
   ```
 
-- **Step 4. Handle merge conflicts (if any)**
+- **Step 4 - Handle merge conflicts (if any)**
 
   If No Conflicts, skip to **Step 5**.
 
@@ -117,7 +117,7 @@ git push origin --delete dev
   git commit -m "Resolve merge conflicts in app.js"  # Commit the fix
   ```
 
-- **Step 5. Push merged result**
+- **Step 5 - Push merged result**
 
   ```bash
   git push
@@ -147,4 +147,4 @@ git push origin --delete dev
 |  | Local | Remote |
 | ----- | ----- | ----- |
 | **Repository** | **Local repository:** the Git repository stored on your computer. <br> **Local repository name:** the folder name on your computer. Not important for Git internals. | **Remote repository:** the Git repository stored on a server (e.g., GitHub). <br> **Remote repository name:** actual project name on GitHub (e.g., `myproject`). <br> Accessed via a **remote name** (default: `origin`). <br> **Remote name:** a local nickname for a remote repository URL (default: `origin`). It does **not** have to match the repository name. |
-| **Branch**  | **Local branch:** branch in your local repo (e.g., `dev`). <br> **Local branch name:** name of that local branch. | **Remote branch:** branch stored in the remote repo, shown as `<remote-name>/<branch-name>` (e.g., `origin/main`, `origin/dev`). <br> **Remote branch name:** name of that remote branch (same representation). |
+| **Branch** | **Local branch:** branch in your local repo (e.g., `dev`). <br> **Local branch name:** name of that local branch. | **Remote branch:** branch stored in the remote repo, shown as `<remote-name>/<branch-name>` (e.g., `origin/main`, `origin/dev`). <br> **Remote branch name:** name of that remote branch (same representation). |

@@ -8,7 +8,7 @@ tags: [""]
 
 ## Installation and Setup
 
-### 1. Install Dependencies (macOS)
+### Step 1 - Install Dependencies (macOS)
 
 - Install the required tools: **Git (extended)**, **Go**, **Node.js**, and **Hugo**.
 
@@ -31,7 +31,7 @@ tags: [""]
   npm install -D tailwindcss postcss autoprefixer
   ```
 
-### 2. Create the Hugo Site (Local)
+### Step 2 - Create the Hugo Site (Local)
 
 - Create a new Hugo site named `<site-name>` and initialize a local Git repository:
 
@@ -43,11 +43,11 @@ tags: [""]
   git branch -M main
   ```
 
-### 3. Create the GitHub Repository (Remote)
+### Step 3 - Create the GitHub Repository (Remote)
 
 - Create an **empty** GitHub repository named `<site-name>`.
 
-### 4. Connect the Local Repository to GitHub
+### Step 4 - Connect the Local Repository to GitHub
 
 - Link the local repository to GitHub and push the initial commit:
 
@@ -59,7 +59,7 @@ tags: [""]
   git push -u origin main
   ```
 
-### 5. Install the Congo Theme (Hugo Module)
+### Step 5 - Install the Congo Theme (Hugo Module)
 
 - Initialize the Hugo module:
 
@@ -94,7 +94,7 @@ tags: [""]
 
 - Copy Congo's default configuration files (excluding `module.toml`) from [this link](https://github.com/jpanther/congo/tree/dev/config/_default) into `config/_default/`.
 
-### 6. Add `.gitignore` and Commit Changes
+### Step 6 - Add `.gitignore` and Commit Changes
 
 - Create and populate the `.gitignore` file:
 
@@ -123,7 +123,7 @@ tags: [""]
   git push
   ```
 
-### 7. Deploy to GitHub Pages
+### Step 7 - Deploy to GitHub Pages
 
 - Rename the repository from `<site-name>` to `<username>.github.io`.
 
@@ -156,7 +156,7 @@ tags: [""]
 
 ## Configuration and Contents Updates
 
-### 1. Update Configuration Files
+### Step 1 - Update Configuration Files
 
 - Modify `hugo.toml`:
 
@@ -182,7 +182,7 @@ tags: [""]
 
 - Modify `menus.en.toml`: [View example](https://github.com/FangfeiLi05/fangfeili05.github.io/blob/main/config/_default/menus.en.toml)
 
-### 2. Add Assets
+### Step 2 - Add Assets
 
 - Add the `assets/` directory to store images, stylesheets, and a custom color scheme ([View Example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/assets)):
 
@@ -200,7 +200,7 @@ tags: [""]
 
   The contents of the directory `css/` are sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/tree/master/assets/css).
 
-### 3. Add Layouts
+### Step 3 - Add Layouts
 
 - Add the `layouts/` directory for custom templates and overrides ([View Example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/layouts)):
 
@@ -212,7 +212,7 @@ tags: [""]
 
   The contents of the directory `_partials/` are sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/tree/master/layouts/partials). Remove `logo.html` to enable the logo.
 
-### 4. Add Static Files
+### Step 4 - Add Static Files
 
 - Add the `static/` directory for fonts, icons, and downloadable resources ([View Example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/static)):
 
@@ -229,7 +229,7 @@ tags: [""]
   └── site.webmanifest
   ```
 
-### 4. Add `tailwind.config.js`
+### Step 5 - Add `tailwind.config.js`
   
   The file `tailwind.config.js` is sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/blob/master/tailwind.config.js).
 

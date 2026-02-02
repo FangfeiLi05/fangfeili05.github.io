@@ -10,7 +10,7 @@ tags: [""]
 
 Best for general Python, web development, and small projects. Lightweight, fast, and modern.
 
-### 1. Installation
+### Installation
 
 - [**VS Code**](https://code.visualstudio.com/docs/introvideos/basics): [Download & Install](https://code.visualstudio.com/download)
 
@@ -54,9 +54,9 @@ Best for general Python, web development, and small projects. Lightweight, fast,
   curl -LsSf https://astral.sh/uv/install.sh | sh
   ```
 
-### 2. Environment Setup
+### Environment Setup
 
-- **Step 1.** Create a Python Project Environment:
+- **Step 1** - Create a Python Project Environment:
 
   ```bash
   uv init
@@ -70,7 +70,7 @@ Best for general Python, web development, and small projects. Lightweight, fast,
   - Optionally generates `uv.lock`.
   - Detects existing dependencies.
 
-- **Step 2.** Install dependencies:
+- **Step 2** - Install dependencies:
 
   ```bash
   uv add regex torch torchvision PyYAML matplotlib requests tqdm notebook
@@ -82,13 +82,13 @@ Best for general Python, web development, and small projects. Lightweight, fast,
 
 Best for data science, machine learning, and scientific computing. Heavier, but handles complex libraries well.
 
-### 1. Installation
+### Installation
 
 - **Miniconda**: [Download & Install](https://www.anaconda.com/docs/getting-started/miniconda/main)
 
-### 2. Environment Setup
+### Environment Setup
 
-- **Step 1.** Create a Python project environment and install dependencies:
+- **Step 1** - Create a Python project environment and install dependencies:
   
   ```bash
   conda env create -f environment.yaml
@@ -96,13 +96,13 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
 
   Example `environment.yaml`: [View Example](/files/environment.yaml)
 
-- **Step 2.** Create a Python Jupyter environment for running JupyterLab:
+- **Step 2** - Create a Python Jupyter environment for running JupyterLab:
 
   ```bash
   conda create -n jupyter_env python=3.14 jupyterlab -c conda-forge
   ```
 
-- **Step 3a (recommended; choose either 3a or 3b).** Enable automatic Jupyter kernel discovery:
+- **Step 3a (recommended; choose either 3a or 3b)** - Enable automatic Jupyter kernel discovery:
 
   ```bash
   conda activate jupyter_env
@@ -112,7 +112,7 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
   
   `nb_conda_kernels` allows JupyterLab to automatically detect all Conda environments as usable kernels.
 
-- **Step 3b (choose either 3a or 3b).** Configure a Jupyter kernel manually:
+- **Step 3b (choose either 3a or 3b)** - Configure a Jupyter kernel manually:
 
   ```bash
   conda activate <env-name>
