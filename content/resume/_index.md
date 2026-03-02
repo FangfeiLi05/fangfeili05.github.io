@@ -3,6 +3,6 @@ title: "My Resume"
 description: "My resume"
 ---
 
-Updated at Feb 27, 2026.
+Updated at March 2, 2026.
 
-- [View PDF](/files/resume_FL_20260227.pdf)
+- [View PDF](/files/resume_FL_20260302.pdf)
