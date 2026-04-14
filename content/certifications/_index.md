@@ -1,6 +1,6 @@
 ---
-title: "Course Certifications"
-description: "List of course certifications"
+title: "Training Certifications"
+description: "List of training certifications"
 
 cascade:
   showReadingTime: false
@@ -8,6 +8,6 @@ cascade:
   groupByYear: false
 ---
 
-This is a list of course certifications.
+This is a list of training certifications.
 
 ---
