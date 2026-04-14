@@ -1,6 +1,6 @@
 ---
 title: "GitHub Branch Merge Workflow"
-date: 2025-12-07
+date: 2025-12-10
 description: "Add description"
 summary: "GitHub"
 tags: [""]

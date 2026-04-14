@@ -1,6 +1,6 @@
 ---
 title: "Python Installation and Environment Setup"
-date: 2025-12-10
+date: 2025-12-15
 description: "Add description"
 summary: "Python"
 tags: [""]

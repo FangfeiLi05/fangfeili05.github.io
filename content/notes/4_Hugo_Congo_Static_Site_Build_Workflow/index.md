@@ -1,6 +1,6 @@
 ---
 title: "Hugo Congo Static Site Build Workflow"
-date: 2025-12-28
+date: 2025-12-01
 description: "Add description"
 summary: "Hugo & Congo"
 tags: [""]

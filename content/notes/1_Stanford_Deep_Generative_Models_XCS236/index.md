@@ -1,6 +1,6 @@
 ---
 title: "Deep Generative Models - XCS236"
-date: 2025-12-19
+date: 2025-12-20
 description: "Add description"
 summary: "Artificial Intelligence Professional Program - Stanford"
 tags: []
