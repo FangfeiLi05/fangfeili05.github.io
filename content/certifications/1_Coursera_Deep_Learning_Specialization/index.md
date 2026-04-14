@@ -28,4 +28,4 @@ tags: []
   [Course Page](https://www.coursera.org/learn/convolutional-neural-networks?specialization=deep-learning) | Certificate (N/A)
 
 - **Sequence Models**  
-  [Course Page](https://www.coursera.org/learn/nlp-sequence-models?specialization=deep-learning) | [Certificate](hhttps://coursera.org/share/e2efe85e0808c65d42dab6f7d17bb4cd)
+  [Course Page](https://www.coursera.org/learn/nlp-sequence-models?specialization=deep-learning) | [Certificate](https://coursera.org/share/e2efe85e0808c65d42dab6f7d17bb4cd)
