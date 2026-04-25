@@ -8,4 +8,4 @@ tags: []
 
 ## My Notes
 
-- **[View PDF](/files/Notes/Notes_Coursera_DL_Specialization_20260420.pdf)**
+- **[View PDF](https://drive.google.com/file/d/19DY2rz9OzpSb-afZqCJTGEhIiZlaVt7s/view?usp=sharing)**
