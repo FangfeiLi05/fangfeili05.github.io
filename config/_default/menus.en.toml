@@ -11,8 +11,8 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "Resume"
-  pageRef = "resume"
+  name = "Resume & Certifications"
+  pageRef = "resume_and_certifications"
   #url = "/files/resume_FL_20260109.pdf"
   weight = 10
 
