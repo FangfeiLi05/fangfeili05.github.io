@@ -33,7 +33,7 @@ tags: []
 ## Additional Resources
 
 - [Course Webpage](https://deepgenerativemodels.github.io/)
-- [Lecture Notes](https://deepgenerativemodels.github.io/notes/)
+- [Lecture Notes](https://deepgenerativemodels.github.io/notes_and_articles/)
 - **Videos:**
   - PyTorch Tutorial (originally for XCS224N) ([YouTube](https://www.youtube.com/watch?v=Uv0AIRr3ptg) | [CoLab](https://colab.research.google.com/drive/1XJhrdkcE6rlC3WwtH7Py1bYl8CEVuBSU?usp=sharing))
   - Variational Autoencoders | Generative AI Animated ([YouTube](https://www.youtube.com/watch?v=qJeaCHQ1k2w))
@@ -45,7 +45,7 @@ tags: []
 
 ## My Notes
 
-- **Covered Topics ([View PDF](/files/Notes/Notes_Stanford_AI_Professional_Program_XCS236.pdf)):**
+- **Covered Topics ([View PDF](/files/notes/Notes_Stanford_AI_Professional_Program_XCS236.pdf)):**
   - Introduction & Background
   - Autoregressive Models (AR)
   - Maximum Likelihood Learning (MLE)

@@ -13,23 +13,23 @@
 [[main]]
   name = "Resume & Certifications"
   pageRef = "resume_and_certifications"
-#  url = "/files/resume_FL_20260109.pdf"
+#  url = "/files/tmpt.pdf"
   weight = 10
 
 [[main]]
-  name = "Papers"
-  pageRef = "papers"
+  name = "Notes & Articles"
+  pageRef = "notes_and_articles"
   weight = 20
+
+[[main]]
+  name = "Papers & Presentations"
+  pageRef = "papers_and_presentations"
+  weight = 30
 
 #[[main]]
 #  name = "Certifications"
 #  pageRef = "certifications"
-#  weight = 30
-
-[[main]]
-  name = "Notes"
-  pageRef = "notes"
-  weight = 40
+#  weight = 40
 
 [[main]]
   identifier = "search"

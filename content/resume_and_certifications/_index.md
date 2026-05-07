@@ -1,9 +1,9 @@
 ---
-title: "Personal Resume and Training Certifications"
-description: "My resume and list of training certifications"
+title: "Resume and Certifications"
+description: "my resume and a collection of training certifications"
 ---
 
-This is my resume and a list of training certifications.
+This is  my resume and a collection of training certifications.
 
 ---
 
@@ -19,7 +19,7 @@ This is my resume and a list of training certifications.
 
 - Certificate (N/A) | [Homepage](https://online.stanford.edu/programs/artificial-intelligence-professional-program)  
   - **Deep Generative Models - XCS236**  
-  [Course Certificate](https://digitalcredential.stanford.edu/check/6E5C7A86B7D9CF298B31FC2642F6C6894050A0D01655BE0634C96C653932E059SFV6V3hwSU5RVDJJcmJoTjlLK0IvRkliajNocU9iM3VMMVBhZGdCTmR6VTJHWVQ2) | [Course Page](https://online.stanford.edu/courses/xcs236-deep-generative-models) | [Learning Notes](https://fangfeili05.github.io/notes/stanford_xcs236/)
+  [Course Certificate](https://digitalcredential.stanford.edu/check/6E5C7A86B7D9CF298B31FC2642F6C6894050A0D01655BE0634C96C653932E059SFV6V3hwSU5RVDJJcmJoTjlLK0IvRkliajNocU9iM3VMMVBhZGdCTmR6VTJHWVQ2) | [Course Page](https://online.stanford.edu/courses/xcs236-deep-generative-models) | [Learning Notes](https://fangfeili05.github.io/notes_and_articles/stanford_xcs236/)
 
   - **Deep Learning for Computer Vision - XCS231N**  
     [Course Certificate](https://digitalcredential.stanford.edu/check/8AB7D7FD6D61C06C220FAF4CAE2BB6D6E9B387B03D6175EEF9DE3FC96A9EBCADVW9kRWhqMFc4Y2wyODlQNnJKcVZ5Nm9LYjA3WjhkZ2F4QUxHKzlwK3ZTaE11Vlgy) | [Course Page](https://online.stanford.edu/courses/xcs231n-deep-learning-computer-vision) | Learning Notes (N/A)
@@ -29,7 +29,7 @@ This is my resume and a list of training certifications.
 
 ### Coursera Deep Learning Specialization
 
-- Certificate (N/A) | [Homepage](https://www.coursera.org/specializations/deep-learning) | [Learning Notes](https://fangfeili05.github.io/notes/coursera_dl_specialization/)  
+- Certificate (N/A) | [Homepage](https://www.coursera.org/specializations/deep-learning) | [Learning Notes](https://fangfeili05.github.io/notes_and_articles/coursera_dl_specialization/)  
   - **Neural Networks and Deep Learning**  
     [Course Certificate](https://coursera.org/share/2bbe26227638426129382674aaeeecd1) | [Course Page](https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning)
 
