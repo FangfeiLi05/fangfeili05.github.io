@@ -11,25 +11,25 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "Resume & Certifications"
-  pageRef = "resume_and_certifications"
-#  url = "/files/tmpt.pdf"
+  name = "Resume"
+  pageRef = "resume"
+#  url = "/files/temp.pdf"
   weight = 10
 
 [[main]]
-  name = "Notes & Articles"
-  pageRef = "notes_and_articles"
+  name = "Certifications"
+  pageRef = "certifications"
   weight = 20
 
 [[main]]
-  name = "Papers & Presentations"
-  pageRef = "papers_and_presentations"
+  name = "Notes"
+  pageRef = "notes"
   weight = 30
 
-#[[main]]
-#  name = "Certifications"
-#  pageRef = "certifications"
-#  weight = 40
+[[main]]
+  name = "Papers"
+  pageRef = "papers"
+  weight = 40
 
 [[main]]
   identifier = "search"

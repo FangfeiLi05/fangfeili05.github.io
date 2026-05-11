@@ -30,8 +30,8 @@ root/
 │
 ├── content/                    
 │   ├── resume_and_certifications/
-│   ├── notes_and_articles/
-│   └── papers_and_presentations/
+│   ├── notes/
+│   └── papers/
 │
 ├── layouts/                    # Custom templates and overrides
 │
@@ -50,4 +50,4 @@ root/
 
 ## Setup Guide
 
-- For a detailed walkthrough on building and deploying this site with Hugo and the Congo theme, see: [This link](https://fangfeili05.github.io/notes_and_articles/hugo_congo_static_site_build_workflow/)
+- For a detailed walkthrough on building and deploying this site with Hugo and the Congo theme, see: [This link](https://fangfeili05.github.io/notes/hugo_congo_static_site_build_workflow/)
