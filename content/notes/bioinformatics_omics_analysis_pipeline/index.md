@@ -9,6 +9,7 @@ tags: [""]
 
 ## Content Structure
 
+```bash
 omics-analysis-example/
 │
 ├── data/
@@ -57,6 +58,7 @@ omics-analysis-example/
 │
 └── env/
     └── environment.yml
+```
 
 ## Conda Environment Setup
 
