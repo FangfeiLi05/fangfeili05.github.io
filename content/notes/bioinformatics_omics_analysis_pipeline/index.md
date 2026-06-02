@@ -75,7 +75,7 @@ conda activate omics-analysis
 A small human RNA-seq dataset is used for real human RNA-seq
 
 ```bash
-fasterq-dump SRR935090 --split-files -O data/raw/
+fasterq-dump SRR10971381 --split-files --split-3 -O data/raw/
 ```
 
 ### Step 2. Download Reference Genome (GRCh38)
@@ -116,8 +116,8 @@ fastqc data/raw/*.fastq -o qc/raw/
 
 ```bash
 fastp \
-  -i data/raw/SRR7766993_1.fastq \
-  -I data/raw/SRR7766993_2.fastq \
+  -i data/raw/SRR10971381_1.fastq \
+  -I data/raw/SRR10971381_2.fastq \
   -o data/trimmed/clean_1.fastq \
   -O data/trimmed/clean_2.fastq \
   -h qc/trimmed/fastp.html \
