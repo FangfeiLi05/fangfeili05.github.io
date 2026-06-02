@@ -96,28 +96,61 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
 
   Example `environment.yaml`: [View Example](/files/environment.yaml)
 
-- **Step 2** - Create a Python Jupyter environment for running JupyterLab:
+- **Step 2** - Enable automatic Jupyter kernel discovery:
+
+  Create a environment for running JupyterLab (This step is done once only):
 
   ```bash
-  conda create -n jupyter_env python=3.14 jupyterlab -c conda-forge
+  conda create -n jupyter_env python=3.10 jupyterlab -c conda-forge
+  ```
+  
+  In case to open Jupyter Lab:
+
+  ```bash
+  conda activate jupyter_env
+  jupyter lab
+  conda deactivate
   ```
 
-- **Step 3a (recommended; choose either 3a or 3b)** - Enable automatic Jupyter kernel discovery:
+  Install kernel discovery tool `nb_conda_kernels`, which allows JupyterLab to automatically detect all Conda environments as usable kernels (This step is done once only):
 
   ```bash
   conda activate jupyter_env
   conda install nb_conda_kernels -c conda-forge
   conda deactivate
   ```
-  
-  `nb_conda_kernels` allows JupyterLab to automatically detect all Conda environments as usable kernels.
 
-- **Step 3b (choose either 3a or 3b)** - Configure a Jupyter kernel manually:
+  Install kernel support in each environment:
 
   ```bash
   conda activate <env-name>
   conda install ipykernel -c anaconda
+  conda deactivate
+  ```
+
+  Alternatively, configure a Jupyter kernel manually (This step is optional):
+
+  ```bash
+  conda activate <env-name>
   ipython kernel install --user --name=<kernel-name>
+  conda deactivate
+  ```
+
+  In case running this optional:
+  
+  List all available Jupyter kernels:
+
+  ```bash
+  conda activate jupyter_env
+  jupyter kernelspec list
+  conda deactivate
+  ```
+
+  Remove a specific Jupyter kernel:
+
+  ```bash
+  conda activate jupyter_env
+  jupyter kernelspec remove <kernel-name>
   conda deactivate
   ```
 
@@ -143,39 +176,11 @@ Best for data science, machine learning, and scientific computing. Heavier, but 
   uv run python <script-name>.py
   ```
 
-- Open JupyterLab:
-
-  ```bash
-  conda activate jupyter_env
-  jupyter lab
-  conda deactivate
-  ```
-
-- List all available Jupyter kernels:
-
-  ```bash
-  conda activate jupyter_env
-  jupyter kernelspec list
-  conda deactivate
-  ```
-
-- Remove a specific Jupyter kernel:
-
-  ```bash
-  conda activate jupyter_env
-  jupyter kernelspec remove <kernel-name>
-  conda deactivate
-  ```
-
-- List all Conda environments:
+- List all Conda environments and remove a Conda environment:
 
   ```bash
   conda env list
-  ```
-
-- Remove a Conda environment:
-
-  ```bash
+  
   conda env remove -n <env-name>
   conda clean --all
   ```
