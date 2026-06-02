@@ -127,7 +127,6 @@ fastp \
 
 ### Step 3: Quality Control (Trimmed Reads)
 
-
 ```bash
 fastqc data/trimmed/*.fastq -o qc/trimmed/
 ```
