@@ -75,7 +75,7 @@ conda activate omics-analysis
 A small human RNA-seq dataset is used for real human RNA-seq
 
 ```bash
-fasterq-dump SRR10971381 --split-files --split-3 -O data/raw/
+fasterq-dump ERR188273 --split-files -O data/raw/
 ```
 
 ### Step 2. Download Reference Genome (GRCh38)
@@ -116,8 +116,8 @@ fastqc data/raw/*.fastq -o qc/raw/
 
 ```bash
 fastp \
-  -i data/raw/SRR10971381_1.fastq \
-  -I data/raw/SRR10971381_2.fastq \
+  -i data/raw/ERR188273_1.fastq \
+  -I data/raw/ERR188273_2.fastq \
   -o data/trimmed/clean_1.fastq \
   -O data/trimmed/clean_2.fastq \
   -h qc/trimmed/fastp.html \
@@ -125,7 +125,14 @@ fastp \
   -w 4
 ```
 
-### Step 3. Alignment
+### Step 3: Quality Control (Trimmed Reads)
+
+
+```bash
+fastqc data/trimmed/*.fastq -o qc/trimmed/
+```
+
+### Step 4. Alignment (key step)
 
 ```bash
 hisat2 -x reference/index/grch38 \
@@ -134,7 +141,7 @@ hisat2 -x reference/index/grch38 \
   -S results/alignment/aligned.sam
 ```
 
-### Step 4. BAM Processing
+### Step 5. BAM Processing
 
 ```bash
 samtools view -bS results/alignment/aligned.sam | samtools sort -o results/alignment/aligned.sorted.bam
@@ -144,7 +151,13 @@ samtools index results/alignment/aligned.sorted.bam
 rm results/alignment/aligned.sam
 ```
 
-### Step 5. Gene Quantification
+### Step 6. Quality Control (Alignment)
+
+```bash
+samtools flagstat results/alignment/aligned.sorted.bam > logs/alignment_qc.txt
+```
+
+### Step 7. Gene Quantification (key step)
 
 ```bash
 featureCounts \
@@ -153,10 +166,6 @@ featureCounts \
   results/alignment/aligned.sorted.bam
 ```
 
-### Step 6. Alignment QC Summary
-
-```bash
-samtools flagstat results/alignment/aligned.sorted.bam > logs/alignment_qc.txt
-```
+### Step 8. Normalization (key step)
 
 ## ML Pipeline Pipeline
