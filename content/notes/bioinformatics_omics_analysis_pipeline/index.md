@@ -122,7 +122,7 @@ fastp \
   -O data/trimmed/clean_2.fastq \
   -h qc/trimmed/fastp.html \
   -j qc/trimmed/fastp.json \
-  -w 4
+  -w 10
 ```
 
 ### Step 3: Quality Control (Trimmed Reads)
@@ -134,7 +134,7 @@ fastqc data/trimmed/*.fastq -o qc/trimmed/
 ### Step 4. Alignment (key step)
 
 ```bash
-hisat2 -x reference/index/grch38 \
+hisat2 -p 10 -x reference/index/grch38 \
   -1 data/trimmed/clean_1.fastq \
   -2 data/trimmed/clean_2.fastq \
   -S results/alignment/aligned.sam
