@@ -72,10 +72,10 @@ conda activate omics-analysis
 
 ### Step 1. Download Dataset (SRA)
 
-A small human RNA-seq dataset (SRA run `SRR7766993`) is used for real human RNA-seq
+A small human RNA-seq dataset is used for real human RNA-seq
 
 ```bash
-fasterq-dump SRR7766993 --split-files -O data/raw/
+fasterq-dump SRR935090 --split-files -O data/raw/
 ```
 
 ### Step 2. Download Reference Genome (GRCh38)
