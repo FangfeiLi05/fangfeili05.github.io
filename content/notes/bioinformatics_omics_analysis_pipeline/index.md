@@ -104,7 +104,7 @@ mv Homo_sapiens.GRCh38.111.gtf reference/annotation.gtf
 hisat2-build reference/genome.fa reference/index/grch38
 ```
 
-## Pipeline
+## Bioinformatics Pipeline
 
 ### Step 1: Quality Control (Raw Reads)
 
@@ -158,3 +158,5 @@ featureCounts \
 ```bash
 samtools flagstat results/alignment/aligned.sorted.bam > logs/alignment_qc.txt
 ```
+
+## ML Pipeline Pipeline
