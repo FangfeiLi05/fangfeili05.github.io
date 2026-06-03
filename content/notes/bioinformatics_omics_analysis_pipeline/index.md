@@ -50,7 +50,6 @@ omics-analysis-example/
 │   └── multiqc/
 │       ├── raw/
 │       ├── trimmed/
-│       ├── alignment/
 │       └── final/
 │
 ├── logs/
