@@ -187,6 +187,8 @@ multiqc qc/ -o qc/multiqc/final/
 
 ```bash
 featureCounts \
+  -T 10 \
+  -p \
   -a reference/annotation.gtf \
   -o results/counts/counts.txt \
   results/alignment/aligned.sorted.bam
