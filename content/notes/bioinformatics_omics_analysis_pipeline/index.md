@@ -1,6 +1,6 @@
 ---
 title: "Bioinformatics Omics Analysis Pipeline"
-date: 2026-06-01
+date: 2026-05-30
 description: "Add description"
 summary: "Bioinformatics"
 tags: [""]
@@ -14,8 +14,8 @@ omics-analysis-example/
 │
 ├── data/
 │   ├── raw/
-│   │   ├── SRRXXXX_1.fastq
-│   │   └── SRRXXXX_2.fastq
+│   │   ├── *_1.fastq
+│   │   └── *_2.fastq
 │   │
 │   └── trimmed/
 │       ├── clean_1.fastq
@@ -38,7 +38,6 @@ omics-analysis-example/
 │   │
 │   ├── counts/
 │   │   ├── gene_counts.txt
-│   │   ├── gene_counts.tsv
 │   │   └── gene_counts.summary
 │   │
 │   └── variants/
@@ -95,7 +94,7 @@ gunzip Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
 mv Homo_sapiens.GRCh38.dna.primary_assembly.fa reference/genome.fa
 ```
 
-### Step 3: Download Annotation (GTF)
+### Step 3: Download Annotation
 
 GTF (Gene Transfer Format)
 
@@ -174,6 +173,7 @@ rm results/alignment/aligned.sam
 
 ```bash
 samtools flagstat results/alignment/aligned.sorted.bam > qc/alignment/flagstat.txt
+
 samtools stats results/alignment/aligned.sorted.bam > qc/alignment/stats.txt
 ```
 
