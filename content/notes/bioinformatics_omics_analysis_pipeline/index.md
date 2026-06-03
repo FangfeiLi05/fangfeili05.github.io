@@ -25,29 +25,38 @@ omics-analysis-example/
 │   ├── genome.fa
 │   ├── annotation.gtf
 │   └── index/
-│       ├── genome_index.1.ht2
-│       ├── genome_index.2.ht2
+│       ├── *.1.ht2
+│       ├── *.2.ht2
 │       └── ...
 │
 ├── results/
 │   ├── alignment/
 │   │   ├── aligned.sam
 │   │   ├── aligned.bam
-│   │   └── aligned.sorted.bam
+│   │   ├── aligned.sorted.bam
+│   │   └── aligned.sorted.bam.bai
 │   │
 │   ├── counts/
-│   │   └── counts.txt
+│   │   ├── gene_counts.txt
+│   │   ├── gene_counts.tsv
+│   │   └── gene_counts.summary
 │   │
 │   └── variants/
 │
 ├── qc/
 │   ├── raw/
 │   ├── trimmed/
-│   └── multiqc_report.html
+│   ├── alignment/
+│   └── multiqc/
+│       ├── raw/
+│       ├── trimmed/
+│       ├── alignment/
+│       └── final/
 │
 ├── logs/
 │   ├── fastp.log
 │   ├── hisat2.log
+│   ├── samtools.log
 │   └── featurecounts.log
 │
 ├── scripts/
@@ -70,7 +79,7 @@ conda activate omics-analysis
 
 ## Data Preparation
 
-### Step 1. Download Dataset (SRA)
+### Step 1: Download Dataset (SRA)
 
 A small human RNA-seq dataset is used for real human RNA-seq
 
@@ -78,7 +87,7 @@ A small human RNA-seq dataset is used for real human RNA-seq
 fasterq-dump ERR188273 --split-files -O data/raw/
 ```
 
-### Step 2. Download Reference Genome (GRCh38)
+### Step 2: Download Reference Genome (GRCh38)
 
 ```bash
 wget https://ftp.ensembl.org/pub/release-111/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
@@ -87,7 +96,7 @@ gunzip Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
 mv Homo_sapiens.GRCh38.dna.primary_assembly.fa reference/genome.fa
 ```
 
-### Step 3. Download Annotation (GTF)
+### Step 3: Download Annotation (GTF)
 
 GTF (Gene Transfer Format)
 
@@ -98,7 +107,7 @@ gunzip Homo_sapiens.GRCh38.111.gtf.gz
 mv Homo_sapiens.GRCh38.111.gtf reference/annotation.gtf
 ```
 
-### Step 4. Build HISAT2 Index
+### Step 4: Build HISAT2 Index
 
 ```bash
 hisat2-build reference/genome.fa reference/index/grch38
@@ -112,7 +121,13 @@ hisat2-build reference/genome.fa reference/index/grch38
 fastqc data/raw/*.fastq -o qc/raw/
 ```
 
-### Step 2. Read Trimming
+### Step 2: Aggregate QC (Raw)
+
+```bash
+multiqc qc/raw/ -o qc/multiqc/raw/
+```
+
+### Step 3: Read Trimming
 
 ```bash
 fastp \
@@ -125,13 +140,19 @@ fastp \
   -w 10
 ```
 
-### Step 3: Quality Control (Trimmed Reads)
+### Step 4: Quality Control (Trimmed Reads)
 
 ```bash
 fastqc data/trimmed/*.fastq -o qc/trimmed/
 ```
 
-### Step 4. Alignment (key step)
+### Step 5: Aggregate QC (Trimmed)
+
+```bash
+multiqc qc/trimmed/ -o qc/multiqc/trimmed/
+```
+
+### Step 6: Alignment (key step)
 
 ```bash
 hisat2 -p 10 -x reference/index/grch38 \
@@ -140,7 +161,7 @@ hisat2 -p 10 -x reference/index/grch38 \
   -S results/alignment/aligned.sam
 ```
 
-### Step 5. BAM Processing
+### Step 7: BAM Processing
 
 ```bash
 samtools view -bS results/alignment/aligned.sam | samtools sort -o results/alignment/aligned.sorted.bam
@@ -150,13 +171,20 @@ samtools index results/alignment/aligned.sorted.bam
 rm results/alignment/aligned.sam
 ```
 
-### Step 6. Quality Control (Alignment)
+### Step 8: Quality Control (Alignment)
 
 ```bash
-samtools flagstat results/alignment/aligned.sorted.bam > logs/alignment_qc.txt
+samtools flagstat results/alignment/aligned.sorted.bam > qc/alignment/flagstat.txt
+samtools stats results/alignment/aligned.sorted.bam > qc/alignment/stats.txt
 ```
 
-### Step 7. Gene Quantification (key step)
+### Step 9: Aggregate QC (Alignment)
+
+```bash
+multiqc qc/ -o qc/multiqc/final/
+```
+
+### Step 10: Gene Quantification (key step)
 
 ```bash
 featureCounts \
@@ -165,6 +193,6 @@ featureCounts \
   results/alignment/aligned.sorted.bam
 ```
 
-### Step 8. Normalization (key step)
+### Step 11: Normalization (key step)
 
 ## ML Pipeline Pipeline
