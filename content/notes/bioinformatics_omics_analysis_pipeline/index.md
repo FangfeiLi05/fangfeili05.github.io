@@ -79,7 +79,11 @@ conda activate omics-analysis
 
 ### Step 1: Download Dataset (SRA)
 
-A small human RNA-seq dataset is used for real human RNA-seq
+A bulk RNA-seq dataset usually comes from one biological sample. In paired-end sequencing, it produces two FASTQ files: `_1.fastq` and `_2.fastq`, both containing reads from the same sample.
+
+Sometimes, multiple samples are sequenced together in one run. Each sample is tagged with a barcode so they can be pooled during sequencing. This is called multiplexing. After sequencing, a process called demultiplexing separates the reads back into individual samples based on these barcodes. Each sample then has its own pair of FASTQ files: `_1.fastq` and `_2.fastq`.
+
+A small human RNA-seq dataset (one sample) is downloaded here and used to demonstrate how to process and quantify counts in a standard bioinformatics pipeline for human RNA-seq analysis.
 
 ```bash
 fasterq-dump ERR188273 --split-files -O data/raw/
