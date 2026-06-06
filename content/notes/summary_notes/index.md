@@ -6,6 +6,6 @@ summary: "Notes"
 tags: [""]
 ---
 
-- **Basic Distribution Relationships**: [View PDF](/files/notes/Notes_Basic_Distribution_Relationships.pdf)
+- **Basic Distribution Relationships** ([View PDF](/files/notes/Notes_Basic_Distribution_Relationships.pdf))
 
-- **Understanding Square Matrix**: [View PDF](/files/notes/Notes_Understanding_Square_Matrix.pdf)
+- **Understanding Square Matrix** ([View PDF](/files/notes/Notes_Understanding_Square_Matrix.pdf))
