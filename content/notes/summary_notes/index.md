@@ -15,3 +15,5 @@ tags: [""]
 ### Understanding Square Matrix
 
 - [View PDF](/files/notes/Notes_Understanding_Square_Matrix.pdf)
+
+[View PDF](/files/resume_FL_20260530.pdf)
