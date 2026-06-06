@@ -1,5 +1,5 @@
 ---
-title: "Bioinformatics Omics Analysis Pipeline"
+title: "Bioinformatics Omics Analysis Pipeline (in progress)"
 date: 2026-05-30
 description: "Add description"
 summary: "Bioinformatics"
