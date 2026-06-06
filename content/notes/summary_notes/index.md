@@ -9,11 +9,11 @@ tags: [""]
 
 ### Basic Distribution Relationships
 
-- [View PDF](/files/notes/Notes_Basic_Distribution_Relationships.pdf)
+- [View PDF](/files/Notes_Basic_Distribution_Relationships.pdf)
 
 
 ### Understanding Square Matrix
 
-- [View PDF](/files/notes/Notes_Understanding_Square_Matrix.pdf)
+- [View PDF](/files/Notes_Understanding_Square_Matrix.pdf)
 
 [View PDF](/files/resume_FL_20260530.pdf)
