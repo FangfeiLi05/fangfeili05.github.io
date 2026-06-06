@@ -7,13 +7,9 @@ tags: [""]
 ---
 
 
-### Basic Distribution Relationships
-
-- [View PDF](/files/Notes_Basic_Distribution_Relationships.pdf)
+- **Basic Distribution Relationships**: [View PDF](/files/Notes_Basic_Distribution_Relationships.pdf)
 
 
-### Understanding Square Matrix
+**Understanding Square Matrix**: [View PDF](/files/Notes_Understanding_Square_Matrix.pdf)
 
-- [View PDF](/files/Notes_Understanding_Square_Matrix.pdf)
-
-[View PDF](/files/resume_FL_20260530.pdf)
+[View PDF](/files/notes/resume_FL_20260530.pdf)

@@ -45,7 +45,7 @@ tags: []
 
 ## My Notes
 
-- **Covered Topics ([View PDF](/files/notes/Notes_Stanford_AI_Professional_Program_XCS236.pdf)):**
+- **Covered Topics ([View PDF](/files/Notes_Stanford_AI_Professional_Program_XCS236.pdf)):**
   - Introduction & Background
   - Autoregressive Models (AR)
   - Maximum Likelihood Learning (MLE)
