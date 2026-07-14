@@ -10,4 +10,6 @@ tags: [""]
 
 - **Basic Distribution Relationships** ([View PDF](/files/notes/Notes_Basic_Distribution_Relationships.pdf))
 
-- **Understanding Square Matrix** ([View PDF](/files/notes/Notes_Understanding_Square_Matrix.pdf))
+- **Understanding Matrix** ([View PDF](/files/notes/Notes_Understanding_Matrix.pdf))
+
+- **Understanding Sequence Modeling** ([View PDF](/files/notes/Notes_Understanding_Sequence_Modeling.pdf))
