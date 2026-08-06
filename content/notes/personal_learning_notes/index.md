@@ -8,7 +8,7 @@ tags: [""]
 
 - **Notes for Coursera Deep Learning Specialization** ([View PDF on Google Drive](https://drive.google.com/file/d/1P-5_LF_BHR0AU1S2AzsJhWYMmDVIF7U4/view?usp=sharing))
 
-- **Basic Distribution Relationships** ([View PDF](/files/notes/Notes_Basic_Distribution_Relationships.pdf))
+- **Relationships Among Basic Probability Distributions** ([View PDF](/files/notes/Notes_Relationships_Among_Basic_Probability_Distributions.pdf))
 
 - **Understanding Matrix** ([View PDF](/files/notes/Notes_Understanding_Matrix.pdf))
 
