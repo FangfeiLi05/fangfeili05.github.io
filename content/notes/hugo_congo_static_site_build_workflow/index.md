@@ -1,162 +1,173 @@
 ---
-title: "Hugo Congo Static Site Build Workflow"
+title: "Building a Static Website with Hugo and Congo"
 date: 2025-12-01
 description: "Add description"
-summary: "Hugo & Congo"
+summary: "Hugo, Congo theme, GitHub Pages deployment workflow"
 tags: [""]
 ---
 
-## Installation and Setup
+## Installation (macOS)
 
-### Step 1 - Install Dependencies (macOS)
+Install required tools: Git (extended version), Go, Node.js, and Hugo:
 
-- Install the required tools: **Git (extended)**, **Go**, **Node.js**, and **Hugo**.
+```bash
+brew install git go node hugo
+```
 
-  ```bash
-  brew install git go node hugo
-  ```
+(Optional) Verify the installations:
 
-- (Optional) Verify the installations:
+```bash
+git --version
+go version
+node -v
+hugo version
+```
 
-  ```bash
-  git --version
-  go version
-  node -v
-  hugo version
-  ```
+Install tools for custom styling: TailwindCSS and related tools:
 
-- Install **TailwindCSS** and related tooling for custom styling:
+```bash
+npm install -D tailwindcss postcss autoprefixer
+```
 
-  ```bash
-  npm install -D tailwindcss postcss autoprefixer
-  ```
+## Create Hugo Website
 
-### Step 2 - Create the Hugo Site (Local)
+Create a new Hugo site named `<site-name>`:
 
-- Create a new Hugo site named `<site-name>` and initialize a local Git repository:
+```bash
+hugo new site <site-name>
+cd <site-name>
+```
 
-  ```bash
-  hugo new site <site-name>
-  cd <site-name>
+Initialize Git:
 
-  git init
-  git branch -M main
-  ```
+```bash
+git init
+git branch -M main
+```
 
-### Step 3 - Create the GitHub Repository (Remote)
+Create an empty GitHub repository named `<site-name>`.
 
-- Create an **empty** GitHub repository named `<site-name>`.
+Connect the local repository:
 
-### Step 4 - Connect the Local Repository to GitHub
+```bash
+git remote add origin https://github.com/<username>/<site-name>.git
+```
 
-- Link the local repository to GitHub and push the initial commit:
+Commit and push:
 
-  ```bash
-  git remote add origin https://github.com/<username>/<site-name>.git
+```bash
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+```
 
-  git add .
-  git commit -m "Initial commit"
-  git push -u origin main
-  ```
+## Add Congo Theme (Using Hugo Modules)
 
-### Step 5 - Install the Congo Theme (Hugo Module)
+Initialize Hugo Modules:
 
-- Initialize the Hugo module:
+```bash
+hugo mod init github.com/<username>/<site-name>
+```
 
-  ```bash
-  hugo mod init github.com/<username>/<site-name>
-  ```
+Create `module.toml` to configure the Congo theme:
 
-- Add the Congo theme:
+```bash
+mkdir -p config/_default
 
-  ```bash
-  mkdir -p config/_default
+cat <<'EOF' > config/_default/module.toml
+[[imports]]
+path = "github.com/jpanther/congo/v2"
+EOF
+```
 
-  cat <<'EOF' > config/_default/module.toml
-  [[imports]]
-  path = "github.com/jpanther/congo/v2"
-  EOF
-  ```
+Start the local server:
 
-- Start the development server (the theme will be downloaded automatically):
+```bash
+hugo server
+```
 
-  ```bash
-  hugo server
-  ```
+The Congo theme will be downloaded automatically.
 
-  Visit: [`http://localhost:1313`](http://localhost:1313)
+Open: [`http://localhost:1313`](http://localhost:1313)
 
-- Remove the default Hugo configuration file:
+Remove the default Hugo configuration:
 
-  ```bash
-  rm hugo.toml
-  ```
+```bash
+rm hugo.toml
+```
 
-- Copy Congo's default configuration files (excluding `module.toml`) from [this link](https://github.com/jpanther/congo/tree/dev/config/_default) into `config/_default/`.
+Copy Congo's default configuration files (excluding `module.toml`) from [this link](https://github.com/jpanther/congo/tree/dev/config/_default) to `config/_default/`.
 
-### Step 6 - Add `.gitignore` and Commit Changes
+Add `.gitignore` and add Hugo-generated files and temporary files:
 
-- Create and populate the `.gitignore` file:
+```bash
+touch .gitignore
 
-  ```bash
-  touch .gitignore
+cat <<'EOF' >> .gitignore
+# Generated files by hugo
+public/
+/resources/_gen/
 
-  cat <<'EOF' >> .gitignore
-  # Generated files by hugo
-  public/
-  /resources/_gen/
+# Temporary lock file while building
+.hugo_build.lock
 
-  # Temporary lock file while building
-  .hugo_build.lock
+# Other
+_backup/
+**/.DS_Store
+EOF
+```
 
-  # Other
-  _backup/
-  **/.DS_Store
-  EOF
-  ```
+Commit and push:
 
-- Commit and push the changes:
+```bash
+git add .
+git commit -m "Set up Hugo module and Congo theme"
+git push
+```
 
-  ```bash
-  git add .
-  git commit -m "Set up Hugo module and Congo theme"
-  git push
-  ```
+## Deploy to GitHub Pages
 
-### Step 7 - Deploy to GitHub Pages
+Rename the repository from `<site-name>` to `<username>.github.io`.
 
-- Rename the repository from `<site-name>` to `<username>.github.io`.
+Update the Git remote:
 
-- Update the Git remote URL:
+```bash
+git remote set-url origin https://github.com/<username>/<username>.github.io.git
+```
 
-  ```bash
-  git remote set-url origin https://github.com/<username>/<username>.github.io.git
-  git remote -v
-  ```
+(Optional) Verify the remote:
 
-- Add a GitHub Actions workflow by creating the directory `.github/workflows/` and copying the workflow file of [this link](https://github.com/pmichaillat/hugo-website/blob/main/.github/workflows/hugo.yml) into `.github/workflows/`.
+```bash
+git remote -v
+```
+
+Add the GitHub Actions workflow:
+
+- Create the directory `.github/workflows/`:
 
   ```bash
   mkdir -p .github/workflows
   ```
 
-- Enable deployment using **GitHub Pages** with **GitHub Actions**, following the official guide: [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
+- Copy the [Hugo workflow files](https://github.com/pmichaillat/hugo-website/blob/main/.github/workflows/hugo.yml) into `.github/workflows/`.
 
-- Commit and deploy the site:
+Enable deployment using **GitHub Pages** with **GitHub Actions**: [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
 
-  ```bash
-  git add .
-  git commit -m "Deploy Hugo site"
-  git push
-  ```
+Commit and push:
 
-  Site URL: `https://<username>.github.io/`
+```bash
+git add .
+git commit -m "Deploy Hugo site"
+git push
+```
+
+Site: `https://<username>.github.io/`
 
 ---
 
-## Configuration and Contents Updates
+## Customize Website
 
-### Step 1 - Update Configuration Files
+### Configuration
 
 - Modify `hugo.toml`:
 
@@ -182,7 +193,7 @@ tags: [""]
 
 - Modify `menus.en.toml`: [View example](https://github.com/FangfeiLi05/fangfeili05.github.io/blob/main/config/_default/menus.en.toml)
 
-### Step 2 - Add Assets
+### Assets
 
 - Add the `assets/` directory to store images, stylesheets, and a custom color scheme ([View Example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/assets)):
 
@@ -200,7 +211,7 @@ tags: [""]
 
   The contents of the directory `css/` are sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/tree/master/assets/css).
 
-### Step 3 - Add Layouts
+### Layouts
 
 - Add the `layouts/` directory for custom templates and overrides ([View Example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/layouts)):
 
@@ -212,7 +223,7 @@ tags: [""]
 
   The contents of the directory `_partials/` are sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/tree/master/layouts/partials). Remove `logo.html` to enable the logo.
 
-### Step 4 - Add Static Files
+### Static Files
 
 - Add the `static/` directory for fonts, icons, and downloadable resources ([View Example](https://github.com/FangfeiLi05/fangfeili05.github.io/tree/main/static)):
 
@@ -229,7 +240,7 @@ tags: [""]
   └── site.webmanifest
   ```
 
-### Step 5 - Add `tailwind.config.js`
+### Tailwind Configuration
   
   The file `tailwind.config.js` is sourced from [this link](https://github.com/AppleGamer22/applegamer22.github.io/blob/master/tailwind.config.js).
 
