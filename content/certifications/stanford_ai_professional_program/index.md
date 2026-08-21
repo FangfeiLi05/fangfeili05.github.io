@@ -2,7 +2,7 @@
 title: "Artificial Intelligence Professional Program - Stanford"
 date: 2025-12-19
 description: "Add description"
-summary: "In Progress"
+summary: ""
 tags: []
 ---
 
@@ -21,5 +21,5 @@ tags: []
   [Course Certificate](https://digitalcredential.stanford.edu/check/8AB7D7FD6D61C06C220FAF4CAE2BB6D6E9B387B03D6175EEF9DE3FC96A9EBCADVW9kRWhqMFc4Y2wyODlQNnJKcVZ5Nm9LYjA3WjhkZ2F4QUxHKzlwK3ZTaE11Vlgy) | [Course Page](https://online.stanford.edu/courses/xcs231n-deep-learning-computer-vision) | Learning Notes (N/A)
 
 - **Natural Language Processing with Deep Learning - XCS224N**  
-   Course Certificate (N/A) | [Course Page](https://online.stanford.edu/courses/xcs224n-natural-language-processing-deep-learning) | Learning Notes (N/A)
+   [Course Certificate](https://digitalcredential.stanford.edu/check/A7E7837AB3E8526C2287DDF9D34FC8DD720BC643D9B746F277D2E6D0FF940F89ZXJEbmJLMTFtb1A2MG1vMDlpVzIwbUROQ29oMEpCSXN6bWhuM29JcFdmbW8zN2Nw) | [Course Page](https://online.stanford.edu/courses/xcs224n-natural-language-processing-deep-learning) | Learning Notes (N/A)
   

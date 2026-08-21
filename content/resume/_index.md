@@ -7,6 +7,6 @@ This is  my resume.
 
 ---
 
-- [View PDF](/files/resume_FL_20260530.pdf) (Last Updated: May 30, 2026)
+- [View PDF](/files/Resume_FL_20260820.pdf) (Last Updated: August 20, 2026)
 
 ---
